@@ -20,6 +20,28 @@
         android:orientation="horizontal"
         android:paddingTop="@dimen/dp_12">
 
+        <LinearLayout
+            android:id="@+id/ll_gift_new"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/dp_32"
+                android:layout_height="@dimen/dp_32"
+                android:background="@mipmap/btn_mall_more"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_6"
+                android:text="@string/gift_new"
+                android:textColor="@color/text_home_gray"
+                android:textSize="@dimen/dp_12" />
+        </LinearLayout>
 
         <LinearLayout
             android:id="@+id/ll_goods_shop"
@@ -90,6 +112,16 @@
                 android:textSize="@dimen/dp_12" />
         </LinearLayout>
 
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/dp_12"
+        android:paddingTop="@dimen/dp_12">
+
         <LinearLayout
             android:id="@+id/ll_agent"
             android:layout_width="@dimen/dp_0"
@@ -112,15 +144,6 @@
                 android:textColor="@color/text_home_gray"
                 android:textSize="@dimen/dp_12" />
         </LinearLayout>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/white"
-        android:orientation="horizontal"
-        android:paddingBottom="@dimen/dp_12"
-        android:paddingTop="@dimen/dp_12">
 
         <LinearLayout
             android:id="@+id/ll_tuig"
@@ -191,28 +214,7 @@
                 android:textSize="@dimen/dp_12" />
         </LinearLayout>
 
-        <LinearLayout
-            android:id="@+id/ll_gift_new"
-            android:layout_width="@dimen/dp_0"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:orientation="vertical">
 
-            <ImageView
-                android:layout_width="@dimen/dp_32"
-                android:layout_height="@dimen/dp_32"
-                android:background="@mipmap/btn_mall_more"
-                android:scaleType="centerCrop" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/dp_6"
-                android:text="@string/gift_new"
-                android:textColor="@color/text_home_gray"
-                android:textSize="@dimen/dp_12" />
-        </LinearLayout>
     </LinearLayout>
 
     <!--<LinearLayout-->

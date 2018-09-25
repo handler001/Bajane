@@ -57,7 +57,7 @@ public class CompanyJoinActivity extends BaseActivity implements View.OnClickLis
         mIvBack = (ImageView) findViewById(R.id.iv_back);
         mIvBack.setOnClickListener(this);
         mTvTitle = (TextView) findViewById(R.id.tv_title);
-        mTvTitle.setText("我要加盟");
+        mTvTitle.setText("商家合作");
         mTvCount = (TextView) findViewById(R.id.tv_count);
         mEtName = (EditText) findViewById(R.id.et_name);
         mEtPhone = (EditText) findViewById(R.id.et_phone);
@@ -139,7 +139,7 @@ public class CompanyJoinActivity extends BaseActivity implements View.OnClickLis
                 mPicker.showCityPicker();
                 break;
             case R.id.tv_phone_free:
-                callPhone("0371-56789997");
+                //callPhone("0371-56789997");
                 break;
         }
     }

@@ -117,11 +117,12 @@ public class PromotionInfoActivity extends BaseActivity implements View.OnClickL
                 finish();
                 break;
             case R.id.iv_tgsj:
-                if (flags == 1) {
-                    openActivity(new Intent(context, WebViewActivity.class).putExtra("url", HttpUtils.MEMBER_PAGE));
-                } else {
-                    openActivity(new Intent(context, WebViewActivity.class).putExtra("url", HttpUtils.MEMBER_PAGE_new));
-                }
+//                if (flags == 1) {
+//                    openActivity(new Intent(context, WebViewActivity.class).putExtra("url", HttpUtils.MEMBER_PAGE));
+//                } else {
+//                    openActivity(new Intent(context, WebViewActivity.class).putExtra("url", HttpUtils.MEMBER_PAGE_new));
+//                }
+                showToast("开发中");
                 break;
             case R.id.ll_code:
                 if (!TextUtils.isEmpty(url)) {

@@ -52,7 +52,7 @@ public class ShopOwnerShareActivity extends BaseActivity implements View.OnClick
         mIvBack = (ImageView) findViewById(R.id.iv_back);
         mIvBack.setOnClickListener(this);
         mTvTitle = (TextView) findViewById(R.id.tv_title);
-        mTvTitle.setText("店主专享");
+        mTvTitle.setText("商家专享");
         mTvShopOrder = (TextView) findViewById(R.id.tv_shop_order);
         mTvShopOrder.setOnClickListener(this);
         mTvShopIncome = (TextView) findViewById(R.id.tv_shop_income);

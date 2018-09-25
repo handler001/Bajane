@@ -85,4 +85,5 @@
     <color name="orange_bg">#ff9c00</color>
     <color name="mall_goods_buy">#FF3140</color>
     <color name="main_sel">#FE6E4C</color>
+    <color name="title_org_sel">#FE6927</color>
 </resources>

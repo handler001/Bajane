@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_act_gray"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rlv_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="@dimen/dp_10"
+        android:scrollbars="none" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:layout_marginTop="@dimen/dp_10"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/dp_10"
+            android:drawablePadding="@dimen/dp_6"
+            android:drawableStart="@drawable/shape_black_bg_line"
+            android:text="附近的店"
+            android:textColor="@color/text_black_3"
+            android:textSize="@dimen/dp_16" />
+
+        <TextView
+            android:id="@+id/tv_shop_all"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:drawableEnd="@mipmap/btn_meelse_enter"
+            android:drawablePadding="@dimen/dp_6"
+            android:gravity="center_vertical"
+            android:text="全部商家"
+            android:textColor="#939393"
+            android:textSize="@dimen/dp_14" />
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -352,7 +352,14 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".activity.MainSelectActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.AllianceMerchantActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ShopSearchActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.ShopDetailActivity"></activity>
     </application>
 
 </manifest>

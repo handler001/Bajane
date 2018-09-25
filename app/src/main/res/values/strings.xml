@@ -25,13 +25,13 @@
     <string name="pwd_sure">请输入确认密码</string>
     <string name="pwd_two_err">2次输入的密码不一致</string>
     <string name="gift_new">商品分类</string>
-    <string name="goods_shop">实体店</string>
+    <string name="goods_shop">商家联盟</string>
     <string name="movie">视频集锦</string>
     <string name="product">产品介绍</string>
     <string name="agent">我是代理</string>
     <string name="tuig">推广</string>
-    <string name="join">我要加盟</string>
-    <string name="caogen">店主专享</string>
+    <string name="join">商家合作</string>
+    <string name="caogen">商家专享</string>
     <string name="permission_refuse">权限被拒，影响该功能正常使用</string>
     <string name="remind">提示</string>
     <string name="ok">确认</string>
@@ -66,4 +66,5 @@
     <string name="ask_free">免费咨询</string>
     <string name="tab_message">消息</string>
     <string name="tab_tpc">tpc专区</string>
+    <string name="person_act">活动记录</string>
 </resources>

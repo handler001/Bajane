@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.jiefutong.emall.R;
+import com.jiefutong.emall.activity.AllianceMerchantActivity;
 import com.jiefutong.emall.activity.BannerWebActivity;
 import com.jiefutong.emall.activity.CompanyJoinActivity;
 import com.jiefutong.emall.activity.GoodsCarManagerActivity;
@@ -294,11 +295,11 @@ public class HomePageFragment extends BaseFragment implements View.OnClickListen
                 if (bean != null && bean.code == HttpUtils.SUCCESS && bean.dataMap != null) {
                     type = bean.dataMap.userType;
                     flag = bean.dataMap.refundFlag;
-                    if (bean.dataMap.coinFlag == 1) {
-                        area.setVisibility(View.VISIBLE);
-                    } else {
-                        area.setVisibility(View.GONE);
-                    }
+//                    if (bean.dataMap.coinFlag == 1) {
+//                        area.setVisibility(View.VISIBLE);
+//                    } else {
+//                        area.setVisibility(View.GONE);
+//                    }
                 }
             }
         });
@@ -322,7 +323,8 @@ public class HomePageFragment extends BaseFragment implements View.OnClickListen
                 openActivity(MallGoodsListActivity.class);
                 break;
             case R.id.ll_goods_shop:
-                openActivity(GoodsShopActivity.class);
+                //openActivity(GoodsShopActivity.class);
+                openActivity(AllianceMerchantActivity.class);
                 break;
             case R.id.ll_video:
                 openActivity(VideoListActivity.class);

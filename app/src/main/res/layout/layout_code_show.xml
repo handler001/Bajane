@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_black_half">
+
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        app:layout_heightPercent="80%w"
+        app:layout_widthPercent="72%w">
+
+        <com.zhy.android.percent.support.PercentLinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/shape_white_bg_circle"
+            android:orientation="vertical"
+            app:layout_heightPercent="96%h"
+            app:layout_widthPercent="96%w">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_gray_bg_circle_tlr"
+                android:gravity="center"
+                android:text="我的券码"
+                android:textColor="@color/text_black_3"
+                app:layout_heightPercent="20%h"
+                app:layout_textSizePercent="6%w" />
+
+
+            <TextView
+                android:id="@+id/tv_pwd_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="券码:2568 2458 2578"
+                android:textColor="@color/text_black_3"
+                app:layout_marginTopPercent="8%h"
+                app:layout_textSizePercent="5.6%w" />
+
+            <ImageView
+                android:id="@+id/iv_pwd_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@mipmap/icon_default_bg"
+                app:layout_heightPercent="54%w"
+                app:layout_marginTopPercent="8%h"
+                app:layout_widthPercent="54%w" />
+
+        </com.zhy.android.percent.support.PercentLinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_cancle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:background="@mipmap/btn_closehelp"
+            app:layout_heightPercent="8%w"
+            app:layout_widthPercent="8%w" />
+
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+
+</com.zhy.android.percent.support.PercentRelativeLayout>

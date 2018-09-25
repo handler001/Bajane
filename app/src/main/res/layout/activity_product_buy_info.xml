@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_title_bar" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_0"
+        android:layout_weight="1"
+        android:background="@color/bg_act_gray">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include layout="@layout/order_header_confirm" />
+
+            <include layout="@layout/layout_pay_method" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:background="@color/white"
+                android:padding="@dimen/dp_10"
+                android:text="订单信息"
+                android:textColor="@color/text_pay_black"
+                android:textSize="@dimen/dp_14" />
+
+            <include layout="@layout/order_goods_confirm" />
+
+            <include layout="@layout/laout_price_total" />
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <LinearLayout
+        android:elevation="@dimen/dp_4"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_48"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_10"
+            android:text="@string/text_pay_moeny"
+            android:textColor="@color/text_pay_black"
+            android:textSize="@dimen/dp_14" />
+
+        <TextView
+            android:id="@+id/tv_money_total"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="￥6870"
+            android:textColor="@color/text_total_money"
+            android:textSize="@dimen/dp_16" />
+
+        <TextView
+            android:id="@+id/tv_money_pay"
+            android:layout_width="@dimen/dp_148"
+            android:layout_height="match_parent"
+            android:background="@color/text_total_money"
+            android:gravity="center"
+            android:text="@string/pay_now"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dp_16" />
+    </LinearLayout>
+
+</LinearLayout>

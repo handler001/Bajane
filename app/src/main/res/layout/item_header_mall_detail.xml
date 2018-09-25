@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <com.zhy.android.percent.support.PercentLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="#FCF9EC"
+            android:orientation="horizontal"
+            android:padding="6dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_4"
+                android:text="分享给好友，好友购买后预计收入："
+                android:textColor="#AF9C80"
+                app:layout_textSizePercent="4%w" />
+
+            <TextView
+                android:id="@+id/tv_gold_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_4"
+                android:singleLine="true"
+                android:text="1699 金币"
+                android:textColor="#FE3035"
+                app:layout_textSizePercent="4%w" />
+        </com.zhy.android.percent.support.PercentLinearLayout>
+    </LinearLayout>
+
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:id="@+id/rl_ticket"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/bg_tickets"
+        app:layout_heightPercent="21%w">
+
+        <TextView
+            android:id="@+id/tv_ticket_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="28dp"
+            android:text="20"
+            android:textColor="#F04241"
+            app:layout_textSizePercent="8%w" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/tv_ticket_price"
+            android:layout_marginLeft="16dp"
+            android:text="¥"
+            android:textColor="#F04241"
+            app:layout_marginBottomPercent="1%w"
+            app:layout_textSizePercent="4.8%w" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/tv_ticket_price"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_toRightOf="@id/tv_ticket_price"
+            android:text="优惠券使用期限"
+            android:textColor="#c2c2c2"
+            app:layout_textSizePercent="3.6%w" />
+
+        <TextView
+            android:id="@+id/tv_ticket_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/tv_ticket_price"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_toRightOf="@id/tv_ticket_price"
+            android:text="2018.03.01-2018.05.31"
+            android:textColor="#c2c2c2"
+            app:layout_textSizePercent="3.6%w" />
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingBottom="16dp"
+        android:paddingLeft="@dimen/dp_10"
+        android:paddingRight="@dimen/dp_10"
+        android:paddingTop="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="推荐语"
+            android:textColor="#50566A"
+            android:textSize="@dimen/sp_14" />
+
+        <TextView
+            android:id="@+id/tv_language"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_6"
+            android:text="从画面来看，新版动画片制作精良，引发网友一波回忆杀：“十分想念这两个小家伙了。”还有网友评论新版动画片"
+            android:textColor="#858E9F"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+</com.zhy.android.percent.support.PercentLinearLayout>

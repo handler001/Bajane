@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_act_gray"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_title_bar" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rlv_car"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_0"
+        android:layout_weight="1"
+        android:scrollbars="none" />
+
+    <RelativeLayout
+        android:id="@+id/ll_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_48"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/iv_select_all"
+            android:layout_width="@dimen/dp_18"
+            android:layout_height="@dimen/dp_18"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/dp_12"
+            android:background="@mipmap/btn_paystyle_default" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/dp_4"
+            android:layout_toEndOf="@id/iv_select_all"
+            android:text="全选"
+            android:textColor="#242424"
+            android:textSize="@dimen/dp_14" />
+
+
+        <TextView
+            android:id="@+id/tv_sales"
+            android:layout_width="@dimen/dp_100"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:background="#F54860"
+            android:gravity="center"
+            android:text="结算"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dp_14" />
+
+        <TextView
+            android:id="@+id/tv_total_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/dp_8"
+            android:layout_toStartOf="@id/tv_sales"
+            android:text="￥0.00"
+            android:textColor="#FD1127"
+            android:textSize="@dimen/dp_16" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/dp_2"
+            android:layout_toStartOf="@id/tv_total_price"
+            android:text="合计"
+            android:textColor="#363636"
+            android:textSize="@dimen/dp_14" />
+
+        <!--<TextView-->
+        <!--android:id="@+id/tv_fee"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@id/tv_total_price"-->
+        <!--android:layout_marginEnd="@dimen/dp_8"-->
+        <!--android:layout_marginTop="@dimen/dp_4"-->
+        <!--android:layout_toStartOf="@id/tv_sales"-->
+        <!--android:text="含运费 ￥0元"-->
+        <!--android:textColor="#A4A4A4"-->
+        <!--android:textSize="@dimen/dp_10" />-->
+    </RelativeLayout>
+
+</LinearLayout>

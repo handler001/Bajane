@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!--<include-->
+    <!--android:id="@+id/rl_bg_two"-->
+    <!--layout="@layout/item_mall_goods_show_two"-->
+    <!--android:visibility="gone" />-->
+
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:id="@+id/rl_bg_one"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:elevation="@dimen/dp_2"
+        android:background="@color/white">
+
+        <com.zhy.android.percent.support.PercentRelativeLayout
+            android:id="@+id/per"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/dp_4">
+
+            <ImageView
+                android:id="@+id/iv_pic"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:scaleType="centerCrop"
+                app:layout_heightPercent="100%w" />
+
+            <com.zhy.android.percent.support.PercentLinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@mipmap/img_bg_goodslist"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="@dimen/dp_4"
+                app:layout_heightPercent="12%w"
+                app:layout_marginRightPercent="2%w"
+                app:layout_widthPercent="50%w">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="预计赚"
+                    android:textColor="@color/white"
+                    app:layout_textSizePercent="12%w" />
+
+                <TextView
+                    android:id="@+id/tv_get_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="#ffe957"
+                    app:layout_textSizePercent="12%w" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="元"
+                    android:textColor="@color/white"
+                    app:layout_textSizePercent="12%w" />
+
+            </com.zhy.android.percent.support.PercentLinearLayout>
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/lav"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_centerHorizontal="true"
+                app:layout_heightPercent="36%w"
+                app:layout_marginTopPercent="32%w"
+                app:layout_widthPercent="36%w"
+                app:lottie_autoPlay="true"
+                app:lottie_fileName="trail_loading.json"
+                app:lottie_loop="true" />
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_pic"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="@dimen/dp_4"
+                android:layout_marginTop="2dp"
+                android:maxLines="1"
+                android:text="加绒加厚保暖外套"
+                android:textColor="#000000"
+                app:layout_textSizePercent="7.2%w" />
+
+            <TextView
+                android:id="@+id/tv_rmb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_name"
+                android:layout_marginLeft="4dp"
+                android:text="¥ "
+                android:textColor="@color/title_bg_red"
+                app:layout_marginTopPercent="2.8%w"
+                app:layout_textSizePercent="5.6%w" />
+
+            <TextView
+                android:id="@+id/tv_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_name"
+                android:layout_toEndOf="@+id/tv_rmb"
+                android:text="0"
+                android:textColor="@color/title_bg_red"
+                app:layout_textSizePercent="8.4%w" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_name"
+                android:layout_marginLeft="6dp"
+                android:layout_toRightOf="@id/tv_price"
+                android:text="券后价"
+                android:textColor="#818181"
+                app:layout_marginTopPercent="3.2%w"
+                app:layout_textSizePercent="4.8%w" />
+
+            <TextView
+                android:id="@+id/tv_sales"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/tv_name"
+                android:layout_marginRight="@dimen/dp_10"
+                android:text="销量 0"
+                android:textColor="#818181"
+                app:layout_marginTopPercent="3.2%w"
+                app:layout_textSizePercent="4.8%w" />
+
+            <ImageView
+                android:id="@+id/iv_more"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/tv_sales"
+                android:padding="1dp"
+                android:src="@mipmap/icon_mall_list_more"
+                app:layout_heightPercent="10%w"
+                app:layout_marginTopPercent="1.6%w"
+                app:layout_widthPercent="20%w" />
+
+            <TextView
+                android:id="@+id/tv_ticket_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/iv_more"
+                android:layout_marginLeft="4dp"
+                android:background="@drawable/icon_quan"
+                android:paddingBottom="2dp"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:paddingTop="2dp"
+                android:text="0元券"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                app:layout_textSizePercent="5.6%w" />
+
+
+        </com.zhy.android.percent.support.PercentRelativeLayout>
+
+
+        <com.zhy.android.percent.support.PercentRelativeLayout
+            android:id="@+id/rl_show"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/per"
+            android:background="#ddffffff"
+            android:visibility="gone"
+            app:layout_heightPercent="100%w">
+
+            <com.zhy.android.percent.support.PercentLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_ticket_get"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="#FF4B4B"
+                    android:gravity="center"
+                    android:text="领券"
+                    android:textColor="@color/white"
+                    app:layout_heightPercent="16%w"
+                    app:layout_textSizePercent="6.4%w" />
+
+                <TextView
+                    android:id="@+id/tv_ticket_share"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="#FF8041"
+                    android:gravity="center"
+                    android:text="分享"
+                    android:textColor="@color/white"
+                    app:layout_heightPercent="16%w"
+                    app:layout_textSizePercent="6.4%w" />
+
+
+            </com.zhy.android.percent.support.PercentLinearLayout>
+
+
+            <TextView
+                android:id="@+id/tv_ticket_share_gold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_10"
+                android:background="@mipmap/bg_lists_share"
+                android:gravity="center"
+                android:text="购买预计赚取0.2元"
+                android:textColor="#78430A"
+                app:layout_heightPercent="16%w"
+                app:layout_paddingTopPercent="2%w"
+                app:layout_textSizePercent="6%w" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:text="推荐语 :"
+                android:textColor="@color/text_black_3"
+                app:layout_marginTopPercent="20%w"
+                app:layout_textSizePercent="6.4%w" />
+
+            <TextView
+                android:id="@+id/tv_content_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_10"
+                android:ellipsize="end"
+                android:maxLines="4"
+                android:text="产品不错，质量过关，很搭配房屋装修，复古铁艺收纳筐北欧风格化"
+                android:textColor="@color/text_black_3"
+                app:layout_marginTopPercent="32%w"
+                app:layout_textSizePercent="6.4%w" />
+
+        </com.zhy.android.percent.support.PercentRelativeLayout>
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+</FrameLayout>

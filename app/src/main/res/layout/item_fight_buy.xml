@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:id="@+id/prl_two"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        android:background="@color/white"
+        android:paddingBottom="@dimen/dp_6">
+
+        <ImageView
+            android:id="@+id/iv_pic"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"
+            app:layout_heightPercent="100%w" />
+
+
+        <com.zhy.android.percent.support.PercentLinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/img_bg_goodslist"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="@dimen/dp_4"
+            app:layout_heightPercent="12%w"
+            app:layout_marginRightPercent="1%w"
+            app:layout_widthPercent="50%w">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="预计赚"
+                android:textColor="@color/white"
+                app:layout_textSizePercent="12%w" />
+
+            <TextView
+                android:id="@+id/tv_get_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="#ffe957"
+                app:layout_textSizePercent="12%w" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="元"
+                android:textColor="@color/white"
+                app:layout_textSizePercent="12%w" />
+
+        </com.zhy.android.percent.support.PercentLinearLayout>
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lav"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_centerHorizontal="true"
+            app:layout_heightPercent="36%w"
+            app:layout_marginTopPercent="32%w"
+            app:layout_widthPercent="36%w"
+            app:lottie_autoPlay="true"
+            app:lottie_fileName="trail_loading.json"
+            app:lottie_loop="true" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_pic"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="@dimen/dp_4"
+            android:layout_marginTop="4dp"
+            android:maxLines="2"
+            android:text=""
+            android:textColor="#000000"
+            app:layout_textSizePercent="8.4%w" />
+
+        <TextView
+            android:id="@+id/tv_rmb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_name"
+            android:layout_marginLeft="4dp"
+            android:text="¥ "
+            android:textColor="@color/title_bg_red"
+            app:layout_marginTopPercent="6.4%w"
+            app:layout_textSizePercent="6.4%w" />
+
+        <TextView
+            android:id="@+id/tv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_name"
+            android:layout_toEndOf="@+id/tv_rmb"
+            android:text="0"
+            android:textColor="@color/title_bg_red"
+            app:layout_marginTopPercent="3%w"
+            app:layout_textSizePercent="10%w" />
+
+        <TextView
+            android:id="@+id/tv_sales"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/tv_name"
+            android:layout_marginRight="@dimen/dp_10"
+            android:text="销量 0"
+            android:textColor="#818181"
+            app:layout_marginTopPercent="6.2%w"
+            app:layout_textSizePercent="6.4%w" />
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+</FrameLayout>

@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_act_gray"
+    android:fitsSystemWindows="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_title_bar" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_10"
+        android:text="转给"
+        android:textColor="@color/text_black_3"
+        android:textSize="@dimen/dp_16" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_120"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:layout_marginStart="@dimen/dp_10"
+        android:background="@drawable/shape_white_bg_circle">
+
+        <LinearLayout
+            android:id="@+id/ll_phone"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_48"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/et_phone"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/transparent"
+                android:hint="请输入对方手机号"
+                android:inputType="phone"
+                android:maxLength="11"
+                android:paddingStart="@dimen/dp_10"
+                android:textColor="@color/text_black_3"
+                android:textSize="@dimen/dp_14" />
+
+            <View
+                android:layout_width="@dimen/dp_0.5"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_10"
+                android:background="#E3E5E9" />
+
+            <TextView
+                android:id="@+id/tv_sure"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:paddingEnd="@dimen/dp_20"
+                android:paddingStart="@dimen/dp_20"
+                android:text="确定"
+                android:textColor="@color/text_black_3"
+                android:textSize="@dimen/dp_14" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0.5"
+            android:layout_below="@id/ll_phone"
+            android:background="#F1F1F1" />
+
+        <ImageView
+            android:id="@+id/iv_header"
+            android:layout_width="@dimen/dp_48"
+            android:layout_height="@dimen/dp_48"
+            android:layout_below="@id/ll_phone"
+            android:layout_marginStart="@dimen/dp_24"
+            android:layout_marginTop="@dimen/dp_12"
+            android:background="@mipmap/header_default" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/iv_header"
+            android:layout_marginStart="@dimen/dp_12"
+            android:layout_marginTop="@dimen/dp_6"
+            android:layout_toEndOf="@id/iv_header"
+            android:text="- -"
+            android:textColor="@color/text_black_3"
+            android:textSize="@dimen/dp_12" />
+
+        <TextView
+            android:id="@+id/tv_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_name"
+            android:layout_marginStart="@dimen/dp_12"
+            android:layout_marginTop="@dimen/dp_6"
+            android:layout_toEndOf="@id/iv_header"
+            android:text="*** **** ****"
+            android:textColor="#9A9B9F"
+            android:textSize="@dimen/dp_12" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_10"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="转出余额"
+            android:textColor="@color/text_black_3"
+            android:textSize="@dimen/dp_14" />
+
+        <TextView
+            android:id="@+id/tv_take"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_6"
+            android:layout_weight="1"
+            android:text="当前可转 0"
+            android:textColor="#9D9FA1"
+            android:textSize="@dimen/dp_12" />
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/et_gold_num"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:layout_marginStart="@dimen/dp_10"
+        android:background="@drawable/shape_white_bg_circle"
+        android:hint="请输入余额数"
+        android:inputType="number"
+        android:paddingStart="@dimen/dp_10"
+        android:singleLine="true"
+        android:textColor="@color/text_black_3"
+        android:textSize="@dimen/dp_14" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_28"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingEnd="@dimen/dp_10"
+        android:paddingStart="@dimen/dp_10">
+
+        <TextView
+            android:id="@+id/tv_ticket"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="手续费:  0.00"
+            android:textColor="#75787E"
+            android:textSize="@dimen/dp_12" />
+
+
+        <TextView
+            android:id="@+id/tv_ticket_sure"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="end|center_vertical"
+            android:text="计算手续费"
+            android:textColor="#75787E"
+            android:textSize="@dimen/dp_12" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_0.5"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:layout_marginStart="@dimen/dp_10"
+        android:background="#DFDFDF" />
+
+    <TextView
+        android:id="@+id/tv_submit"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_24"
+        android:background="@drawable/shape_orange_bg_gradient"
+        android:gravity="center"
+        android:text="确 定"
+        android:textColor="@color/white"
+        android:textSize="@dimen/dp_16" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_40"
+        android:background="@mipmap/img_txgoldexplain"
+        android:visibility="gone" />
+</LinearLayout>

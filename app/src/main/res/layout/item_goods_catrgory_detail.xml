@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/dp_6"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="热门"
+        android:textColor="@color/text_black_3"
+        android:textSize="14dp" />
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_marginTop="@dimen/dp_6"
+        android:padding="@dimen/dp_6"
+        android:id="@+id/rlv_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_white_bg"
+        android:scrollbars="none" />
+</LinearLayout>

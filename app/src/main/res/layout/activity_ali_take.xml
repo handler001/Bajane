@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_act_gray"
+    android:fitsSystemWindows="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_title_bar" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_10"
+        android:text="到帐支付宝"
+        android:textColor="@color/text_black_3"
+        android:textSize="@dimen/dp_16" />
+
+    <RelativeLayout
+        android:id="@+id/rl_ali"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_120"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:layout_marginStart="@dimen/dp_10"
+        android:background="@drawable/shape_white_bg_circle">
+
+        <ImageView
+            android:id="@+id/iv_ali"
+            android:layout_width="@dimen/dp_60"
+            android:layout_height="@dimen/dp_60"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/dp_20"
+            android:background="@mipmap/img_icon_alipaypay" />
+
+
+        <ImageView
+            android:id="@+id/iv_enter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/dp_20"
+            android:background="@mipmap/enter_gray" />
+
+        <TextView
+            android:id="@+id/tv_ali_not"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_toEndOf="@id/iv_ali"
+            android:text="未绑定支付宝"
+            android:textColor="@color/text_black_3"
+            android:textSize="@dimen/dp_14"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_ali_bind"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:layout_toStartOf="@id/iv_enter"
+            android:text="去绑定"
+            android:textColor="#9A9B9F"
+            android:textSize="@dimen/dp_12"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_ali_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/iv_ali"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_6"
+            android:layout_toEndOf="@id/iv_ali"
+            android:text=""
+            android:textColor="@color/text_black_3"
+            android:textSize="@dimen/dp_16" />
+
+        <TextView
+            android:id="@+id/tv_ali_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_ali_name"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_4"
+            android:layout_toEndOf="@id/iv_ali"
+            android:text=""
+            android:textColor="#9A9B9F"
+            android:textSize="@dimen/dp_16" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_10"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="提现金额"
+            android:textColor="@color/text_black_3"
+            android:textSize="@dimen/dp_14" />
+
+        <TextView
+            android:id="@+id/tv_take"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_6"
+            android:layout_weight="1"
+            android:text="当前可提 0.00元"
+            android:textColor="#9D9FA1"
+            android:textSize="@dimen/dp_12" />
+
+        <TextView
+            android:id="@+id/tv_take_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="全部提现"
+            android:textColor="#FF551A"
+            android:textSize="@dimen/dp_14" />
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/et_money"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:layout_marginStart="@dimen/dp_10"
+        android:background="@drawable/shape_white_bg_circle"
+        android:hint="请输入提现金额"
+        android:inputType="number"
+        android:paddingStart="@dimen/dp_10"
+        android:singleLine="true"
+        android:textColor="@color/text_black_3"
+        android:textSize="@dimen/dp_14" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:orientation="horizontal"
+        android:paddingEnd="@dimen/dp_16"
+        android:paddingStart="@dimen/dp_16">
+
+        <TextView
+            android:id="@+id/tv_fee"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="手续费: 0.00元"
+            android:textColor="#75787E"
+            android:textSize="@dimen/dp_12" />
+
+        <TextView
+            android:id="@+id/tv_fee_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="手续费计算"
+            android:textColor="@color/text_black_3"
+            android:textSize="@dimen/dp_12" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_submit"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_24"
+        android:background="@drawable/shape_orange_bg_gradient"
+        android:gravity="center"
+        android:text="提 现"
+        android:textColor="@color/white"
+        android:textSize="@dimen/dp_16" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_40"
+        android:orientation="vertical"
+        android:paddingEnd="@dimen/dp_20"
+        android:paddingStart="@dimen/dp_20">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="提示:"
+            android:textColor="#AFB1B5"
+            android:textSize="@dimen/sp_14" />
+
+        <TextView
+            android:id="@+id/tv_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:text="1.付款到账时效为1~3日，最快次日到账。"
+            android:textColor="#AFB1B5"
+            android:textSize="@dimen/sp_14" />
+
+        <TextView
+            android:id="@+id/tv_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:text="2.每笔按付款金额收取手续费，按金额1%收取，最低1元，最高25元"
+            android:textColor="#AFB1B5"
+            android:textSize="@dimen/sp_14" />
+    </LinearLayout>
+
+</LinearLayout>

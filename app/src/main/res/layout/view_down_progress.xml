@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_black_half">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/shape_white_bg_circle"
+        android:orientation="vertical"
+        app:layout_widthPercent="60%w">
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/dp_10"
+            android:text="下载进度"
+            android:textColor="@color/text_black_3"
+            android:textSize="@dimen/sp_14" />
+
+        <com.zhy.android.percent.support.PercentRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp_10">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/lav"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_name"
+                android:layout_centerInParent="true"
+                app:layout_heightPercent="56%w"
+                app:layout_widthPercent="56%w"
+                app:lottie_autoPlay="true"
+                app:lottie_fileName="material_activity_indicator.json"
+                app:lottie_loop="true" />
+
+            <TextView
+                android:id="@+id/tv_progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_name"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="0 %"
+                android:textColor="@color/text_black_3"
+                app:layout_textSizePercent="8%w" />
+        </com.zhy.android.percent.support.PercentRelativeLayout>
+    </LinearLayout>
+
+</com.zhy.android.percent.support.PercentRelativeLayout>

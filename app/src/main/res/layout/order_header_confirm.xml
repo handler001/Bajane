@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/dp_10"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_48"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_10"
+            android:text="配送方式"
+            android:textColor="@color/text_pay_black"
+            android:textSize="@dimen/dp_14" />
+
+        <TextView
+            android:id="@+id/tv_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_10"
+            android:background="@drawable/shape_orange_bg_post_stroke"
+            android:paddingBottom="@dimen/dp_4"
+            android:paddingEnd="@dimen/dp_12"
+            android:paddingStart="@dimen/dp_12"
+            android:paddingTop="@dimen/dp_4"
+            android:text="配送到家"
+            android:textColor="@color/text_total_money"
+            android:textSize="@dimen/dp_14" />
+
+        <TextView
+            android:id="@+id/tv_self"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_10"
+            android:background="@drawable/shape_gray_bg_post_stroke"
+            android:paddingBottom="@dimen/dp_4"
+            android:paddingEnd="@dimen/dp_12"
+            android:paddingStart="@dimen/dp_12"
+            android:paddingTop="@dimen/dp_4"
+            android:text="到店自取"
+            android:textColor="@color/post_nor"
+            android:textSize="@dimen/dp_14" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_0.5"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:layout_marginStart="@dimen/dp_10"
+        android:background="@color/line_bg_e" />
+
+    <RelativeLayout
+        android:id="@+id/rl_add_location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp_20">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/person_add"
+            android:textColor="@color/text_pay_black"
+            android:textSize="@dimen/dp_14" />
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@mipmap/enter_gray" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp_20"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="@dimen/dp_6"
+            android:drawableStart="@mipmap/icon_bought_name"
+            android:ellipsize="end"
+            android:maxLength="16"
+            android:text="阿药药"
+            android:textColor="@color/text_pay_black"
+            android:textSize="@dimen/dp_12" />
+
+        <TextView
+            android:id="@+id/tv_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_toRightOf="@id/tv_name"
+            android:drawablePadding="@dimen/dp_6"
+            android:drawableStart="@mipmap/icon_bought_mphone"
+            android:text="13112345678"
+            android:textColor="@color/text_pay_black"
+            android:textSize="@dimen/dp_12" />
+
+        <TextView
+            android:id="@+id/tv_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_name"
+            android:layout_marginRight="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_10"
+            android:drawablePadding="@dimen/dp_6"
+            android:drawableStart="@mipmap/icon_bought_loc"
+            android:text="河南省郑州市中原区桐柏路街道零是盛大的呢飞机啦手机费发1号楼1单元1111户"
+            android:textColor="@color/text_pay_black"
+            android:textSize="@dimen/dp_12" />
+
+        <ImageView
+            android:id="@+id/iv_address_select"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@mipmap/enter_gray" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_shop_self"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp_20"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="＋ 请选择店铺信息"
+            android:textColor="@color/text_pay_black"
+            android:textSize="@dimen/dp_14" />
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@mipmap/enter_gray" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/rl_shop_self_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp_20">
+
+        <TextView
+            android:id="@+id/tv_shop_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="@dimen/dp_6"
+            android:drawableStart="@mipmap/icon_bought_name"
+            android:ellipsize="end"
+            android:maxLength="16"
+            android:text="阿药药"
+            android:textColor="@color/text_pay_black"
+            android:textSize="@dimen/dp_12" />
+
+        <TextView
+            android:id="@+id/tv_shop_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_toRightOf="@id/tv_shop_name"
+            android:drawablePadding="@dimen/dp_6"
+            android:drawableStart="@mipmap/icon_bought_mphone"
+            android:text="13112345678"
+            android:textColor="@color/text_pay_black"
+            android:textSize="@dimen/dp_12" />
+
+        <TextView
+            android:id="@+id/tv_shop_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_shop_name"
+            android:layout_marginRight="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_10"
+            android:drawablePadding="@dimen/dp_6"
+            android:drawableStart="@mipmap/icon_bought_loc"
+            android:text="河南省郑州市中原区桐柏路街道零是盛大的呢飞机啦手机费发1号楼1单元1111户"
+            android:textColor="@color/text_pay_black"
+            android:textSize="@dimen/dp_12" />
+
+        <ImageView
+            android:id="@+id/iv_address_shop_select"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@mipmap/enter_gray" />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/tv_order_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp_12"
+        android:text="订单编号：20265413546845345454"
+        android:textColor="@color/text_black_3"
+        android:textSize="@dimen/dp_14" />
+
+
+    <TextView
+        android:id="@+id/tv_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_order_code"
+        android:paddingBottom="@dimen/dp_12"
+        android:paddingStart="@dimen/dp_12"
+        android:text="支付宝"
+        android:textColor="#9C9C9C"
+        android:textSize="@dimen/dp_16" />
+
+    <TextView
+        android:id="@+id/tv_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_order_code"
+        android:layout_marginStart="@dimen/dp_12"
+        android:layout_toEndOf="@id/tv_type"
+        android:paddingBottom="@dimen/dp_12"
+        android:text="112.00"
+        android:textColor="@color/text_black_3"
+        android:textSize="@dimen/dp_16" />
+
+    <ImageView
+        android:id="@+id/iv_enter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="@dimen/dp_12"
+        android:background="@mipmap/enter_gray" />
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:layout_toStartOf="@id/iv_enter"
+        android:paddingTop="@dimen/dp_12"
+        android:text="17/11/15"
+        android:textColor="@color/text_black_3"
+        android:textSize="@dimen/dp_14" />
+
+    <TextView
+        android:id="@+id/tv_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_time"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_12"
+        android:layout_toStartOf="@id/iv_enter"
+        android:text="已通过"
+        android:textColor="#09CC6E"
+        android:textSize="@dimen/dp_16" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_0.5"
+        android:layout_below="@id/tv_type"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:layout_marginStart="@dimen/dp_10"
+        android:background="#DFDFDF" />
+</RelativeLayout>

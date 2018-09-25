@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/dp_12"
+    android:background="@color/white"
+    android:elevation="@dimen/dp_2"
+    android:padding="@dimen/dp_10">
+
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawablePadding="@dimen/dp_6"
+        android:drawableStart="@mipmap/icon_bought_name"
+        android:text="阿药药"
+        android:textColor="@color/text_pay_black"
+        app:layout_textSizePercent="4%w" />
+
+    <TextView
+        android:id="@+id/tv_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_toRightOf="@id/tv_name"
+        android:drawablePadding="@dimen/dp_6"
+        android:drawableStart="@mipmap/icon_bought_mphone"
+        android:text="13112345678"
+        android:textColor="@color/text_pay_black"
+        app:layout_textSizePercent="4%w" />
+
+    <TextView
+        android:id="@+id/tv_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_name"
+        android:layout_marginRight="@dimen/dp_40"
+        android:layout_marginTop="@dimen/dp_10"
+        android:drawablePadding="@dimen/dp_6"
+        android:drawableStart="@mipmap/icon_bought_loc"
+        android:text="河南省郑州市中原区桐柏路街道零是盛大的呢飞机啦手机费发1号楼1单元1111户"
+        android:textColor="@color/text_pay_black"
+        app:layout_textSizePercent="4%w" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_0.5"
+        android:layout_below="@id/tv_address"
+        android:layout_marginTop="@dimen/dp_10"
+        android:background="@color/line_bg_gray" />
+
+    <ImageView
+        android:id="@+id/iv_select"
+        android:layout_width="@dimen/dp_20"
+        android:layout_height="@dimen/dp_20"
+        android:layout_below="@id/tv_address"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_20"
+        android:background="@mipmap/btn_paystyle_default" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_address"
+        android:layout_marginLeft="@dimen/dp_6"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_toRightOf="@id/iv_select"
+        android:text="设为默认"
+        android:textColor="@color/text_pay_black"
+        android:textSize="@dimen/dp_14" />
+
+    <TextView
+        android:id="@+id/tv_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/tv_address"
+        android:layout_marginRight="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_20"
+        android:drawableLeft="@mipmap/icon_address_del"
+        android:drawablePadding="@dimen/dp_4"
+        android:text="删除"
+        android:textColor="#999FB1"
+        android:textSize="@dimen/dp_14" />
+
+
+    <TextView
+        android:id="@+id/tv_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_address"
+        android:layout_marginRight="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_toLeftOf="@id/tv_delete"
+        android:drawableLeft="@mipmap/icon_address_edit"
+        android:drawablePadding="@dimen/dp_4"
+        android:text="编辑"
+        android:textColor="#999FB1"
+        android:textSize="@dimen/dp_14" />
+</com.zhy.android.percent.support.PercentRelativeLayout>

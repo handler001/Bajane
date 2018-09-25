@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingBottom="@dimen/dp_12">
+
+    <ImageView
+        android:id="@+id/iv_header"
+        android:layout_width="@dimen/dp_40"
+        android:layout_height="@dimen/dp_40"
+        android:layout_margin="@dimen/dp_10"
+        android:scaleType="centerCrop" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/iv_header"
+        android:layout_marginTop="@dimen/dp_4"
+        android:layout_toEndOf="@id/iv_header"
+        android:text="贝佳尼"
+        android:textColor="@color/text_black_9"
+        android:textSize="@dimen/dp_12" />
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_name"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_6"
+        android:layout_toEndOf="@id/iv_header"
+        android:text=""
+        android:textColor="@color/text_black_3"
+        android:textSize="@dimen/dp_12" />
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_content"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_6"
+        android:layout_toEndOf="@id/iv_header"
+        android:text="27分钟前"
+        android:textColor="@color/text_black_9"
+        android:textSize="@dimen/dp_12" />
+
+</RelativeLayout>

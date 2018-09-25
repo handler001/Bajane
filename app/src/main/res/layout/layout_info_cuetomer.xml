@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_black_half">
+
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:id="@+id/prl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        app:layout_heightPercent="120%w"
+        app:layout_widthPercent="90%w">
+
+        <com.zhy.android.percent.support.PercentLinearLayout
+            android:id="@+id/ll_center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/shape_white_bg_circle"
+            android:elevation="@dimen/dp_4"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            app:layout_heightPercent="96%h"
+            app:layout_widthPercent="96%w">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="扫码识别二维码联系我们"
+                android:textColor="@color/text_black_3"
+                app:layout_marginTopPercent="6%h"
+                app:layout_textSizePercent="4%h" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/icon_bg_code"
+                app:layout_heightPercent="28%h"
+                app:layout_marginTopPercent="4%h"
+                app:layout_widthPercent="28%h" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp_80"
+                android:text="工作时间:"
+                android:textColor="#898C91"
+                app:layout_marginTopPercent="2%h"
+                app:layout_textSizePercent="3.2%h" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="周一至周六"
+                android:textColor="@color/text_black_3"
+                app:layout_marginTopPercent="2%h"
+                app:layout_textSizePercent="3%h" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="9:00-12:00 14:00-18:00"
+                android:textColor="@color/text_black_3"
+                app:layout_marginTopPercent="2%h"
+                app:layout_textSizePercent="3%h" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:layout_marginEnd="@dimen/dp_10"
+                android:layout_marginStart="@dimen/dp_10"
+                android:background="@mipmap/img_xuline_help"
+                app:layout_marginTopPercent="2.4%h" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp_80"
+                android:text="联系方式:"
+                android:textColor="#898C91"
+                app:layout_marginTopPercent="2.4%h"
+                app:layout_textSizePercent="3.2%h" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="电话："
+                android:textColor="@color/text_black_3"
+                app:layout_marginTopPercent="2%h"
+                app:layout_textSizePercent="3%h" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="若非工作时间，请耐心等待"
+                android:textColor="#BABDC3"
+                app:layout_marginTopPercent="4%h"
+                app:layout_textSizePercent="3%h" />
+
+        </com.zhy.android.percent.support.PercentLinearLayout>
+
+
+        <ImageView
+            android:id="@+id/iv_cancle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:background="@mipmap/btn_closehelp"
+            android:elevation="@dimen/dp_6"
+            app:layout_heightPercent="6.4%w"
+            app:layout_widthPercent="6.4%w" />
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+</com.zhy.android.percent.support.PercentRelativeLayout>

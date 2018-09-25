@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_black_half">
+
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/iv_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_10"
+            android:background="@mipmap/icon_default_bg"
+            app:layout_heightPercent="24%w"
+            app:layout_widthPercent="24%w" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/iv_header"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_toRightOf="@id/iv_header"
+            android:text="库存"
+            android:textColor="@color/text_shop_desc"
+            app:layout_textSizePercent="4.2%w" />
+
+        <TextView
+            android:id="@+id/tv_num_bh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/iv_header"
+            android:layout_toRightOf="@id/iv_header"
+            android:text="0"
+            android:textColor="@color/title_bg_red"
+            app:layout_marginLeftPercent="12%w"
+            app:layout_textSizePercent="4.2%w" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/iv_header"
+            android:layout_marginLeft="@dimen/dp_4"
+            android:layout_toRightOf="@id/tv_num_bh"
+            android:text="件"
+            android:textColor="@color/text_shop_desc"
+            app:layout_textSizePercent="4.2%w" />
+
+        <TextView
+            android:id="@+id/tv_price_bh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_12"
+            android:layout_toRightOf="@id/iv_header"
+            android:text="¥ 0"
+            android:textColor="@color/title_bg_red"
+            app:layout_marginTopPercent="12%w"
+            app:layout_textSizePercent="5%w" />
+
+        <ImageButton
+            android:id="@+id/ib_cancle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_margin="@dimen/dp_10"
+            android:background="@mipmap/icon_cancle"
+            app:layout_heightPercent="6%w"
+            app:layout_widthPercent="6%w" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0.5"
+            android:layout_below="@id/iv_header"
+            android:background="#E4E4E4" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rlv_category"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_header"
+            android:scrollbars="none" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0.5"
+            android:layout_below="@id/rlv_category"
+            android:background="#E4E4E4" />
+
+        <TextView
+            android:id="@+id/tv_buy_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rlv_category"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:text="数量"
+            android:textColor="#50566A"
+            app:layout_marginTopPercent="4.8%w"
+            app:layout_textSizePercent="4%w" />
+
+        <TextView
+            android:id="@+id/tv_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/rlv_category"
+            android:layout_marginRight="@dimen/dp_10"
+            android:background="@drawable/shape_gray_kuang_bg"
+            android:gravity="center"
+            android:text="＋"
+            app:layout_heightPercent="8%w"
+            app:layout_marginTopPercent="4%w"
+            app:layout_textSizePercent="3.6%w"
+            app:layout_widthPercent="8%w" />
+
+        <TextView
+            android:id="@+id/tv_num_buy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rlv_category"
+            android:layout_toLeftOf="@id/tv_add"
+            android:background="@drawable/shape_gray_kuang_bg"
+            android:gravity="center"
+            android:text="1"
+            app:layout_heightPercent="8%w"
+            app:layout_marginTopPercent="4%w"
+            app:layout_textSizePercent="3.6%w"
+            app:layout_widthPercent="12%w" />
+
+        <TextView
+            android:id="@+id/tv_remove"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rlv_category"
+            android:layout_toLeftOf="@id/tv_num_buy"
+            android:background="@drawable/shape_gray_kuang_bg"
+            android:gravity="center"
+            android:text="－"
+            app:layout_heightPercent="8%w"
+            app:layout_marginTopPercent="4%w"
+            app:layout_textSizePercent="3.6%w"
+            app:layout_widthPercent="8%w" />
+
+        <TextView
+            android:id="@+id/bt_buy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_buy_num"
+            android:background="#FE374E"
+            android:gravity="center"
+            android:paddingBottom="@dimen/dp_10"
+            android:paddingTop="@dimen/dp_10"
+            android:text="确定"
+            android:textColor="@color/white"
+            app:layout_marginTopPercent="8%w"
+            app:layout_textSizePercent="4%w" />
+
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+
+</RelativeLayout>

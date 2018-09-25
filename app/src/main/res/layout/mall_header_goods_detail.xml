@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <include
+        android:id="@+id/iv_pic"
+        layout="@layout/header_benner_show"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_heightPercent="100%w" />
+
+    <TextView
+        android:id="@+id/tv_goods_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_pic"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_4"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:text=""
+        android:textColor="@color/text_black_3"
+        app:layout_textSizePercent="4.8%w" />
+
+    <TextView
+        android:id="@+id/tv_ticket_coupon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_goods_name"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="@dimen/dp_4"
+        android:text="券后价"
+        android:textColor="#858E9F"
+        app:layout_textSizePercent="3.6%w" />
+
+    <TextView
+        android:id="@+id/tv_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_goods_name"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="20dp"
+        android:text=""
+        android:textColor="#F93543"
+        app:layout_textSizePercent="6.4%w" />
+
+
+    <TextView
+        android:id="@+id/tv_price_old"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/tv_price"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_toRightOf="@id/tv_price"
+        android:padding="@dimen/dp_4"
+        android:text=""
+        android:textColor="#C2C2C2"
+        app:layout_textSizePercent="4%w" />
+
+    <TextView
+        android:id="@+id/tv_discount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/tv_goods_name"
+        android:layout_marginRight="@dimen/dp_10"
+        android:layout_marginTop="6dp"
+        android:text=""
+        android:textColor="#F63B5E"
+        app:layout_textSizePercent="3.6%w" />
+
+    <TextView
+        android:id="@+id/tv_rmb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/tv_discount"
+        android:layout_marginRight="@dimen/dp_10"
+        android:layout_marginTop="4dp"
+        android:text=""
+        android:textColor="#495570"
+        app:layout_textSizePercent="3.6%w" />
+
+
+</com.zhy.android.percent.support.PercentRelativeLayout>

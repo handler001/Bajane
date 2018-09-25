@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/dp_6"
+    android:layout_marginTop="@dimen/dp_6"
+    android:elevation="@dimen/dp_2"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/dp_16"
+    android:paddingEnd="@dimen/dp_20"
+    android:paddingStart="@dimen/dp_20"
+    android:paddingTop="@dimen/dp_16">
+
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_6"
+            android:text="贝佳尼"
+            android:textColor="@color/act_text_black"
+            app:layout_textSizePercent="6%w" />
+
+        <TextView
+            android:id="@+id/tv_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_toRightOf="@id/tv_name"
+            android:text="小分子活性肽"
+            android:textColor="@color/act_text_black"
+            app:layout_marginTopPercent="1%w"
+            app:layout_textSizePercent="4.8%w" />
+
+        <ImageView
+            android:id="@+id/iv_first"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/dp_2"
+            android:background="@mipmap/icon_hdfire"
+            app:layout_heightPercent="6%w"
+            app:layout_widthPercent="5.6%w" />
+
+        <ImageView
+            android:id="@+id/iv_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/dp_4"
+            android:layout_marginTop="@dimen/dp_2"
+            android:layout_toLeftOf="@id/iv_first"
+            android:background="@mipmap/icon_hdfire"
+            app:layout_heightPercent="6%w"
+            app:layout_widthPercent="5.6%w" />
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_12"
+        android:text="永久分红店的销售营业额3‰，接销售营业额1‰"
+        android:textColor="@color/text_blue"
+        app:layout_textSizePercent="4%w" />
+
+
+    <com.zhy.android.percent.support.PercentLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_12"
+        android:background="@color/item_act_content_gary"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/dp_16"
+        android:paddingTop="@dimen/dp_16">
+
+        <TextView
+            android:id="@+id/tv_one"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/gray_circle"
+            android:drawablePadding="@dimen/dp_6"
+            android:paddingLeft="@dimen/dp_10"
+            android:text="多送3240金币，多送64810银币，多送648积分"
+            android:textColor="@color/text_black_3"
+            app:layout_textSizePercent="4.2%w" />
+
+
+        <TextView
+            android:id="@+id/tv_two"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/gray_circle"
+            android:drawablePadding="@dimen/dp_6"
+            android:paddingStart="@dimen/dp_10"
+            android:text="到手1万金币，2万银币，2000积分，10张兑换券"
+            android:textColor="@color/text_black_3"
+            app:layout_marginTopPercent="2.4%w"
+            app:layout_textSizePercent="4.2%w" />
+
+        <TextView
+            android:id="@+id/tv_three"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/gray_circle"
+            android:drawablePadding="@dimen/dp_6"
+            android:paddingStart="@dimen/dp_10"
+            android:text="直推10% 间推3%"
+            android:textColor="@color/text_black_3"
+            app:layout_marginTopPercent="2.4%w"
+            app:layout_textSizePercent="4.2%w" />
+
+    </com.zhy.android.percent.support.PercentLinearLayout>
+
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_12">
+
+        <TextView
+            android:id="@+id/tv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="￥0"
+            android:textColor="@color/price_orange"
+            app:layout_textSizePercent="5.4%w" />
+
+
+        <TextView
+            android:id="@+id/tv_buy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:background="@drawable/shape_buy_bg"
+            android:paddingBottom="@dimen/dp_4"
+            android:paddingEnd="@dimen/dp_12"
+            android:paddingStart="@dimen/dp_12"
+            android:paddingTop="@dimen/dp_4"
+            android:text="10盒 立即购买"
+            android:textColor="@color/white"
+            app:layout_textSizePercent="4.8%w" />
+
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+</com.zhy.android.percent.support.PercentLinearLayout>

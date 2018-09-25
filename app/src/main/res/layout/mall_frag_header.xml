@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <include layout="@layout/frag_mall_header" />
+
+    <include layout="@layout/mall_goods_header_four" />
+
+    <include layout="@layout/mall_header_everyday_buy" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_64"
+        android:layout_marginTop="@dimen/dp_8"
+        android:background="@mipmap/img_youlike_mall" />
+
+</LinearLayout>

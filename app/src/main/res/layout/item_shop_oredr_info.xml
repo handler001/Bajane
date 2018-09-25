@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/dp_10"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/tv_order_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp_10"
+        android:text="订单号:AB4254351351"
+        android:textColor="#54585E"
+        android:textSize="@dimen/dp_14" />
+
+    <TextView
+        android:id="@+id/tv_order_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:padding="@dimen/dp_10"
+        android:text="待验证"
+        android:textColor="#FF551A"
+        android:textSize="@dimen/dp_14" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/prl_center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_order_code"
+        android:scrollbars="none" />
+    <!--<com.zhy.android.percent.support.PercentRelativeLayout-->
+        <!--android:id="@+id/prl_center"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@id/tv_order_code"-->
+        <!--android:background="#FAFAFA"-->
+        <!--android:padding="@dimen/dp_10">-->
+
+
+        <!--<ImageView-->
+            <!--android:id="@+id/iv_pic"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:background="@mipmap/icon_default_bg"-->
+            <!--app:layout_heightPercent="18%w"-->
+            <!--app:layout_widthPercent="18%w" />-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/tv_name"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginStart="@dimen/dp_6"-->
+            <!--android:layout_toEndOf="@id/iv_pic"-->
+            <!--android:text="冬季被子加厚保暖冬被芯学生宿舍太空棉被双人空调被单人春秋被褥"-->
+            <!--android:textColor="#50566A"-->
+            <!--app:layout_textSizePercent="3.6%w" />-->
+
+
+        <!--<TextView-->
+            <!--android:id="@+id/tv_price"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignBottom="@id/iv_pic"-->
+            <!--android:layout_marginStart="@dimen/dp_6"-->
+            <!--android:layout_toEndOf="@id/iv_pic"-->
+            <!--android:text="￥450"-->
+            <!--android:textColor="#FF551A"-->
+            <!--app:layout_textSizePercent="4%w" />-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/tv_count"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignBottom="@id/iv_pic"-->
+            <!--android:layout_alignParentEnd="true"-->
+            <!--android:text="x1"-->
+            <!--android:textColor="#ACB4C2"-->
+            <!--app:layout_textSizePercent="4%w" />-->
+
+    <!--</com.zhy.android.percent.support.PercentRelativeLayout>-->
+    <TextView
+        android:id="@+id/tv_order_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/prl_center"
+        android:padding="@dimen/dp_10"
+        android:text="￥0"
+        android:textColor="#FF551A"
+        android:textSize="@dimen/dp_14" />
+
+    <TextView
+        android:id="@+id/tv_num_total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/prl_center"
+        android:layout_toStartOf="@id/tv_order_price"
+        android:paddingTop="@dimen/dp_10"
+        android:text="共0件商品  总计:"
+        android:textColor="#50566A"
+        android:textSize="@dimen/dp_14" />
+
+</RelativeLayout>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/dp_10"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/tv_order_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp_10"
+        android:text="订单号:AB4254351351"
+        android:textColor="#54585E"
+        android:textSize="@dimen/dp_14" />
+
+    <TextView
+        android:id="@+id/tv_order_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:padding="@dimen/dp_10"
+        android:text="待验证"
+        android:textColor="#FF551A"
+        android:textSize="@dimen/dp_14" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/prl_center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_order_code"
+        android:background="#FAFAFA"
+        android:scrollbars="none" />
+
+    <TextView
+        android:id="@+id/tv_order_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/prl_center"
+        android:padding="@dimen/dp_10"
+        android:text="￥686"
+        android:textColor="#FF551A"
+        android:textSize="@dimen/dp_14" />
+
+    <TextView
+        android:id="@+id/tv_goods_total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/prl_center"
+        android:layout_toLeftOf="@id/tv_order_price"
+        android:paddingTop="@dimen/dp_10"
+        android:text="共1件商品  总计:"
+        android:textColor="#50566A"
+        android:textSize="@dimen/dp_14" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_0.5"
+        android:layout_below="@id/tv_order_price"
+        android:background="#E7E7E7" />
+
+    <RelativeLayout
+        android:id="@+id/rl_order"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:layout_below="@id/tv_order_price"
+        android:background="@color/white"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tv_order_pay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:background="@drawable/shape_green_bg_desc_stroke"
+            android:paddingBottom="@dimen/dp_2"
+            android:paddingEnd="@dimen/dp_10"
+            android:paddingStart="@dimen/dp_10"
+            android:paddingTop="@dimen/dp_2"
+            android:text="支付订单"
+            android:textColor="#259E47"
+            android:textSize="@dimen/dp_14" />
+
+        <TextView
+            android:id="@+id/tv_order_cancle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:layout_toStartOf="@id/tv_order_pay"
+            android:background="@drawable/shape_gray_bg_desc_stroke"
+            android:paddingBottom="@dimen/dp_2"
+            android:paddingEnd="@dimen/dp_10"
+            android:paddingStart="@dimen/dp_10"
+            android:paddingTop="@dimen/dp_2"
+            android:text="取消订单"
+            android:textColor="#50566A"
+            android:textSize="@dimen/dp_14" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

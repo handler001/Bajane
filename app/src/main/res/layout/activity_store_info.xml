@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_title_bar" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.zhy.android.percent.support.PercentRelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv_pic"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@mipmap/icon_default_bg"
+                    android:scaleType="centerCrop"
+                    app:layout_heightPercent="64%w" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/iv_pic"
+                    android:background="#64000000"
+                    android:gravity="center"
+                    android:text="点击图片修改店招"
+                    android:textColor="@color/white"
+                    app:layout_heightPercent="10%w"
+                    app:layout_textSizePercent="4%w" />
+
+            </com.zhy.android.percent.support.PercentRelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:drawablePadding="@dimen/dp_6"
+                android:drawableStart="@drawable/shape_red_line_bold"
+                android:paddingStart="@dimen/dp_10"
+                android:text="门店名称"
+                android:textColor="#404243"
+                android:textSize="@dimen/dp_14" />
+
+            <EditText
+                android:id="@+id/et_name"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40"
+                android:layout_margin="@dimen/dp_10"
+                android:background="@drawable/shape_gray_stroke_circle"
+                android:hint="请输入店铺名称"
+                android:paddingStart="@dimen/dp_6"
+                android:singleLine="true"
+                android:textColor="@color/text_black_3"
+                android:textSize="@dimen/dp_14" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:drawablePadding="@dimen/dp_6"
+                android:drawableStart="@drawable/shape_red_line_bold"
+                android:paddingStart="@dimen/dp_10"
+                android:text="门店电话"
+                android:textColor="#404243"
+                android:textSize="@dimen/dp_14" />
+
+            <EditText
+                android:id="@+id/et_phone"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40"
+                android:layout_margin="@dimen/dp_10"
+                android:background="@drawable/shape_gray_stroke_circle"
+                android:hint="请输入门店电话"
+                android:paddingStart="@dimen/dp_6"
+                android:singleLine="true"
+                android:textColor="@color/text_black_3"
+                android:textSize="@dimen/dp_14" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:drawablePadding="@dimen/dp_6"
+                android:drawableStart="@drawable/shape_red_line_bold"
+                android:paddingStart="@dimen/dp_10"
+                android:text="选择门店区域"
+                android:textColor="#404243"
+                android:textSize="@dimen/dp_14" />
+
+            <TextView
+                android:id="@+id/et_address_area"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40"
+                android:layout_margin="@dimen/dp_10"
+                android:background="@drawable/shape_gray_stroke_circle"
+                android:drawableEnd="@mipmap/enter_gray"
+                android:gravity="center_vertical"
+                android:hint="请输入门店区域"
+                android:paddingEnd="@dimen/dp_12"
+                android:paddingStart="@dimen/dp_6"
+                android:singleLine="true"
+                android:textColor="@color/text_black_3"
+                android:textSize="@dimen/dp_14" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:drawablePadding="@dimen/dp_6"
+                android:drawableStart="@drawable/shape_red_line_bold"
+                android:paddingStart="@dimen/dp_10"
+                android:text="选择门店地址"
+                android:textColor="#404243"
+                android:textSize="@dimen/dp_14" />
+
+            <TextView
+                android:id="@+id/et_address"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40"
+                android:layout_margin="@dimen/dp_10"
+                android:background="@drawable/shape_gray_stroke_circle"
+                android:drawableEnd="@mipmap/enter_gray"
+                android:gravity="center_vertical"
+                android:hint="请输入门店地址"
+                android:paddingEnd="@dimen/dp_12"
+                android:paddingStart="@dimen/dp_6"
+                android:singleLine="true"
+                android:textColor="@color/text_black_3"
+                android:textSize="@dimen/dp_14" />
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>

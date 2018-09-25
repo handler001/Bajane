@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/iv_select"
+        android:layout_width="@dimen/dp_20"
+        android:layout_height="@dimen/dp_20"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/dp_10"
+        android:background="@mipmap/btn_paystyle_default"
+        android:scaleType="centerCrop" />
+
+
+    <ImageView
+        android:id="@+id/iv_pic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_10"
+        android:layout_toEndOf="@id/iv_select"
+        android:background="@mipmap/icon_default_bg"
+        app:layout_heightPercent="20%w"
+        app:layout_widthPercent="20%w" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/iv_pic"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_2"
+        android:layout_toEndOf="@id/iv_pic"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:text="贝佳尼健康防老抗皱产品"
+        android:textColor="#50566A"
+        app:layout_textSizePercent="4%w" />
+
+    <TextView
+        android:id="@+id/tv_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/iv_pic"
+        android:layout_marginBottom="@dimen/dp_2"
+        android:layout_toEndOf="@id/iv_pic"
+        android:singleLine="true"
+        android:text="10盒装"
+        android:textColor="#ACB4C2"
+        app:layout_textSizePercent="4%w" />
+
+    <TextView
+        android:id="@+id/tv_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/iv_pic"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="@dimen/dp_2"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:singleLine="true"
+        android:text="x60"
+        android:textColor="#ACB4C2"
+        app:layout_textSizePercent="4%w" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_0.5"
+        android:layout_below="@id/iv_pic"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:layout_marginStart="@dimen/dp_10"
+        android:background="#ECECEC" />
+</com.zhy.android.percent.support.PercentRelativeLayout>

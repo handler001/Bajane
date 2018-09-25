@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/dp_6"
+    android:layout_marginEnd="@dimen/dp_12"
+    android:layout_marginStart="@dimen/dp_12"
+    android:layout_marginTop="@dimen/dp_6"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="@dimen/dp_4"
+    app:cardElevation="@dimen/dp_2">
+
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/dp_6">
+
+        <ImageView
+            android:id="@+id/iv_pic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/icon_default_bg"
+            android:scaleType="centerCrop"
+            app:layout_heightPercent="36%w" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_pic"
+            android:padding="@dimen/dp_8"
+            android:text="贝佳尼肽"
+            android:textColor="@color/text_pro_name"
+            android:textStyle="bold"
+            app:layout_textSizePercent="5.6%w" />
+
+        <TextView
+            android:id="@+id/tv_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_name"
+            android:layout_marginStart="@dimen/dp_10"
+            android:drawablePadding="@dimen/dp_6"
+            android:drawableStart="@drawable/shape_red_line"
+            android:text="小分子肽的简介"
+            android:textColor="@color/text_red_desc"
+            app:layout_textSizePercent="3.6%w" />
+
+        <TextView
+            android:id="@+id/tv_watch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@id/tv_desc"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:drawableEnd="@mipmap/btn_enternow"
+            android:drawablePadding="@dimen/dp_6"
+            android:padding="@dimen/dp_6"
+            android:text="立即查看"
+            android:textColor="@color/text_black_watch"
+            app:layout_textSizePercent="4.2%w" />
+
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+
+</android.support.v7.widget.CardView>

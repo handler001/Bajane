@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:id="@+id/prl_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/shop_bg_info">
+
+        <ImageView
+            android:id="@+id/iv_pics"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_12"
+            android:background="@mipmap/icon_default_bg"
+            android:scaleType="centerCrop"
+            app:layout_heightPercent="24%w"
+            app:layout_widthPercent="24%w" />
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/iv_pics"
+            android:layout_marginRight="@dimen/dp_10"
+            android:layout_toRightOf="@id/iv_pics"
+            android:text=""
+            android:textColor="@color/text_shop_desc"
+            app:layout_textSizePercent="3.6%w" />
+
+
+        <TextView
+            android:id="@+id/tv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/iv_pics"
+            android:layout_alignStart="@id/tv_content"
+            android:text="¥ 0"
+            android:textColor="#F93543"
+            app:layout_textSizePercent="4.2%w" />
+
+        <TextView
+            android:id="@+id/tv_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@id/tv_content"
+            android:layout_below="@id/tv_content"
+            android:text=""
+            android:textColor="#ACB4C2"
+            app:layout_marginTopPercent="3%w"
+            app:layout_textSizePercent="3.6%w" />
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+
+
+    <TextView
+        android:id="@+id/tv_goods_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/prl_content"
+        android:layout_margin="12dp"
+        android:text="购买数量:"
+        android:textColor="#50566A"
+        android:textSize="@dimen/dp_14" />
+
+    <TextView
+        android:id="@+id/tv_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/tv_goods_num"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/dp_10"
+        android:background="@drawable/shape_gray_kuang_bg"
+        android:gravity="center"
+        android:text="＋"
+        app:layout_heightPercent="6%w"
+        app:layout_textSizePercent="3.6%w"
+        app:layout_widthPercent="6%w" />
+
+    <TextView
+        android:id="@+id/tv_num_buy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/tv_goods_num"
+        android:layout_toLeftOf="@id/tv_add"
+        android:background="@drawable/shape_gray_kuang_bg"
+        android:gravity="center"
+        android:singleLine="true"
+        android:text="1"
+        app:layout_heightPercent="6%w"
+        app:layout_textSizePercent="3.6%w"
+        app:layout_widthPercent="8%w" />
+
+    <TextView
+        android:id="@+id/tv_remove"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/tv_goods_num"
+        android:layout_alignTop="@id/tv_num_buy"
+        android:layout_toLeftOf="@id/tv_num_buy"
+        android:background="@drawable/shape_gray_kuang_bg"
+        android:gravity="center"
+        android:text="－"
+        app:layout_heightPercent="6%w"
+        app:layout_textSizePercent="3.6%w"
+        app:layout_widthPercent="6%w" />
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/tv_num_buy_new"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/tv_goods_num"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/dp_10"
+        android:gravity="center"
+        android:singleLine="true"
+        android:text="1"
+        app:layout_heightPercent="6%w"
+        app:layout_textSizePercent="3.6%w"
+        app:layout_widthPercent="8%w" />
+
+</com.zhy.android.percent.support.PercentRelativeLayout>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/home"
+        android:enabled="true"
+        android:title="@string/tab_home"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/act"
+        android:enabled="true"
+        android:title="@string/tab_act"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/tpc"
+        android:enabled="true"
+        android:title="@string/tab_tpc"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/message"
+        android:enabled="true"
+        android:title="@string/tab_message"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/person"
+        android:enabled="true"
+        android:title="@string/tab_person"
+        app:showAsAction="ifRoom" />
+
+</menu>

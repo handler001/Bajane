@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_act_gray"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_title_bar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_6"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_shop_order"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_48"
+            android:background="@color/white"
+            android:drawableEnd="@mipmap/enter_gray"
+            android:drawablePadding="@dimen/dp_10"
+            android:drawableStart="@mipmap/icon_storder"
+            android:gravity="center_vertical"
+            android:paddingEnd="@dimen/dp_12"
+            android:paddingStart="@dimen/dp_12"
+            android:text="我的店铺订单"
+            android:textColor="#414244"
+            android:textSize="@dimen/dp_14" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0.5"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:layout_marginStart="@dimen/dp_10"
+            android:background="#EDEDED" />
+
+        <TextView
+            android:id="@+id/tv_shop_income"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_48"
+            android:background="@color/white"
+            android:drawableEnd="@mipmap/enter_gray"
+            android:drawablePadding="@dimen/dp_10"
+            android:drawableStart="@mipmap/icon_stobenefit"
+            android:gravity="center_vertical"
+            android:paddingEnd="@dimen/dp_12"
+            android:paddingStart="@dimen/dp_12"
+            android:text="店铺收益榜"
+            android:textColor="#414244"
+            android:textSize="@dimen/dp_14" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0.5"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:layout_marginStart="@dimen/dp_10"
+            android:background="#EDEDED" />
+
+        <RelativeLayout
+            android:id="@+id/rl_shop"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_48"
+            android:paddingEnd="@dimen/dp_12"
+            android:paddingStart="@dimen/dp_12">
+
+            <TextView
+                android:id="@+id/tv_shop_change"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_48"
+                android:background="@color/white"
+                android:drawablePadding="@dimen/dp_10"
+                android:drawableStart="@mipmap/icon_stomessage"
+                android:gravity="center_vertical"
+                android:text="门店信息"
+                android:textColor="#414244"
+                android:textSize="@dimen/dp_14" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:drawableEnd="@mipmap/enter_gray"
+                android:drawablePadding="@dimen/dp_10"
+                android:gravity="center_vertical"
+                android:text="修改"
+                android:textColor="#8C8E91"
+                android:textSize="@dimen/dp_12" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <include layout="@layout/item_goods_shop" />
+</LinearLayout>

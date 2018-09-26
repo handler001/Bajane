@@ -212,6 +212,10 @@ public class HttpUtils {
     public static String GOODS_CATEGORY_LIST = "/app/category/list";
     //分类列表
     public static String SHOP_CATEGORY_LIST = "/app/shop/categoryList";
+    //商家列表
+    public static String SHOP_LIST = "/app/shop/list";
+    //附近商家
+    public static String SHOP_NEAR_LIST = "/app/shop/nearList";
     //h5页面信息
     //收益榜说明
     public static String INCOME_LIST_EXPLAIN_PAGE = "http://bjn.leetx.net/bjnhtml/IncomeList.html";

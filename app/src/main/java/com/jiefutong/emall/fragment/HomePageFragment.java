@@ -34,6 +34,7 @@ import com.jiefutong.emall.utils.GlideUtils;
 import com.jiefutong.emall.utils.HttpUtils;
 import com.jiefutong.emall.utils.JsonUtil;
 import com.jiefutong.emall.utils.MyStringCallBack;
+import com.jiefutong.emall.utils.PermissionUtil;
 import com.lzy.okgo.OkGo;
 import com.lzy.okgo.callback.StringCallback;
 import com.lzy.okgo.model.HttpParams;
@@ -324,7 +325,12 @@ public class HomePageFragment extends BaseFragment implements View.OnClickListen
                 break;
             case R.id.ll_goods_shop:
                 //openActivity(GoodsShopActivity.class);
-                openActivity(AllianceMerchantActivity.class);
+                new PermissionUtil(mctx, PermissionUtil.LOCATION) {
+                    @Override
+                    public void onsuccess() {
+                        openActivity(AllianceMerchantActivity.class);
+                    }
+                };
                 break;
             case R.id.ll_video:
                 openActivity(VideoListActivity.class);

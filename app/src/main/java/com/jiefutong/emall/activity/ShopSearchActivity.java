@@ -1,6 +1,7 @@
 package com.jiefutong.emall.activity;
 
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
@@ -8,15 +9,23 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.PopupWindow;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
+import com.chad.library.adapter.base.BaseViewHolder;
 import com.jiefutong.emall.R;
 import com.jiefutong.emall.adapter.ShopListAdapter;
 import com.jiefutong.emall.bean.ShopListBean;
+import com.jiefutong.emall.bean.ShopListDetailsBean;
+import com.jiefutong.emall.utils.HttpUtils;
+import com.jiefutong.emall.utils.JsonUtil;
+import com.jiefutong.emall.utils.MyStringCallBack;
+import com.lzy.okgo.OkGo;
+import com.lzy.okgo.model.HttpParams;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class ShopSearchActivity extends BaseActivity implements View.OnClickListener {
 
@@ -33,17 +42,24 @@ public class ShopSearchActivity extends BaseActivity implements View.OnClickList
     private ImageView mIvPx;
     private LinearLayout mLlPx;
     private RecyclerView mRlvShop;
-    private ArrayList<ShopListBean> datas = new ArrayList<>();
+    private ArrayList<ShopListDetailsBean> datas = new ArrayList<>();
     private BaseQuickAdapter adapter;
     private View view;
+    private PopupWindow popupWindow;
+    private ArrayList<String> lists = new ArrayList<>();
+    private ListAdapter listAdapter;
+    private String curposition;
+    private String id;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shop_search);
+        id = getIntent().getStringExtra("id");
         initView();
         settitlewhite();
         initshop();
+        initlist();
     }
 
     private void initView() {
@@ -75,8 +91,32 @@ public class ShopSearchActivity extends BaseActivity implements View.OnClickList
     }
 
     private void initshop() {
-        for (int i = 0; i < 3; i++) {
-            datas.add(new ShopListBean());
+        HttpParams params = new HttpParams();
+        if (id == null || TextUtils.isEmpty(id)) {
+            params.put("shopCategoryId", "");
+        } else {
+            params.put("shopCategoryId", id);
+        }
+        HttpUtils.getNetData(HttpUtils.SHOP_LIST, this, params, new MyStringCallBack(context) {
+            @Override
+            protected void dealdata(String data) {
+                ShopListBean bean = JsonUtil.parseObject(data, ShopListBean.class);
+                if (bean != null && bean.code == HttpUtils.SUCCESS) {
+                    adapter.addData(bean.dataMap);
+                }
+            }
+        });
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        OkGo.getInstance().cancelTag(this);
+    }
+
+    private void initlist() {
+        for (int i = 0; i < 4; i++) {
+            lists.add("测试" + i);
         }
     }
 
@@ -118,6 +158,7 @@ public class ShopSearchActivity extends BaseActivity implements View.OnClickList
             mIvAddress.setBackgroundResource(R.mipmap.icon_downr_flei);
             mTvPx.setTextColor(getcolor(R.color.text_black_3));
             mIvPx.setBackgroundResource(R.mipmap.icon_downr_flei);
+            showpop();
         } else if (i == 1) {
             mTvAll.setTextColor(getcolor(R.color.text_black_3));
             mIvAll.setBackgroundResource(R.mipmap.icon_downr_flei);
@@ -125,7 +166,7 @@ public class ShopSearchActivity extends BaseActivity implements View.OnClickList
             mIvAddress.setBackgroundResource(R.mipmap.icon_upper_flei);
             mTvPx.setTextColor(getcolor(R.color.text_black_3));
             mIvPx.setBackgroundResource(R.mipmap.icon_downr_flei);
-
+            showpop();
         } else if (i == 2) {
             mTvAll.setTextColor(getcolor(R.color.text_black_3));
             mIvAll.setBackgroundResource(R.mipmap.icon_downr_flei);
@@ -133,6 +174,7 @@ public class ShopSearchActivity extends BaseActivity implements View.OnClickList
             mIvAddress.setBackgroundResource(R.mipmap.icon_downr_flei);
             mTvPx.setTextColor(getcolor(R.color.title_org_sel));
             mIvPx.setBackgroundResource(R.mipmap.icon_upper_flei);
+            showpop();
         } else {
             mTvAll.setTextColor(getcolor(R.color.text_black_3));
             mIvAll.setBackgroundResource(R.mipmap.icon_downr_flei);
@@ -140,6 +182,54 @@ public class ShopSearchActivity extends BaseActivity implements View.OnClickList
             mIvAddress.setBackgroundResource(R.mipmap.icon_downr_flei);
             mTvPx.setTextColor(getcolor(R.color.text_black_3));
             mIvPx.setBackgroundResource(R.mipmap.icon_downr_flei);
+        }
+    }
+
+    private void showpop() {
+        if (popupWindow == null) {
+            View view = View.inflate(context, R.layout.pop_shop_list, null);
+            RecyclerView recyclerView = view.findViewById(R.id.rlv_list);
+            recyclerView.setLayoutManager(new LinearLayoutManager(context));
+            listAdapter = new ListAdapter(R.layout.item_list_pop_shop, lists);
+            recyclerView.setAdapter(listAdapter);
+            view.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    dealposition(4);
+                    popupWindow.dismiss();
+                }
+            });
+            popupWindow = new PopupWindow(view, LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT);
+            popupWindow.showAsDropDown(mLlAll);
+        } else {
+            listAdapter.notifyDataSetChanged();
+            popupWindow.showAsDropDown(mLlAll);
+        }
+    }
+
+    class ListAdapter extends BaseQuickAdapter<String, BaseViewHolder> {
+        public ListAdapter(int layoutResId, @Nullable List<String> data) {
+            super(layoutResId, data);
+        }
+
+        @Override
+        protected void convert(BaseViewHolder helper, final String item) {
+            if (item.equals(curposition)) {
+                helper.setTextColor(R.id.tv_name, getcolor(R.color.title_org_sel));
+                helper.getView(R.id.iv_show).setVisibility(View.VISIBLE);
+            } else {
+                helper.setTextColor(R.id.tv_name, getcolor(R.color.text_black_3));
+                helper.getView(R.id.iv_show).setVisibility(View.INVISIBLE);
+            }
+            helper.setText(R.id.tv_name, item);
+            helper.itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    curposition = item;
+                    popupWindow.dismiss();
+                    dealposition(4);
+                }
+            });
         }
     }
 }

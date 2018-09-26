@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_act_gray"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <com.zhy.android.percent.support.PercentLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.zhy.android.percent.support.PercentRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/bgbanner"
+            app:layout_heightPercent="48%w">
+
+            <ImageView
+                android:id="@+id/iv_scan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:background="@mipmap/icon_tpc_scan"
+                app:layout_heightPercent="10%w"
+                app:layout_marginTopPercent="8%w"
+                app:layout_widthPercent="10%w" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_scan"
+                android:layout_centerHorizontal="true"
+                android:text="扫一扫"
+                android:textColor="@color/white"
+                app:layout_marginTopPercent="2.8%w"
+                app:layout_textSizePercent="3.2%w" />
+
+            <com.zhy.android.percent.support.PercentLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_heightPercent="10%w"
+                app:layout_marginTopPercent="32%w">
+
+                <com.zhy.android.percent.support.PercentRelativeLayout
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/iv_scan"
+                        android:layout_centerHorizontal="true"
+                        android:text="余额"
+                        android:textColor="@color/white"
+                        app:layout_textSizePercent="9.6%w" />
+
+                    <TextView
+                        android:id="@+id/tv_tpc_money"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_below="@id/iv_scan"
+                        android:layout_centerHorizontal="true"
+                        android:text="1.1988"
+                        android:textColor="#D7D7D6"
+                        app:layout_textSizePercent="9.6%w" />
+
+                </com.zhy.android.percent.support.PercentRelativeLayout>
+
+                <View
+                    android:layout_width="@dimen/dp_0.5"
+                    android:layout_height="match_parent"
+                    android:background="@color/white" />
+
+                <com.zhy.android.percent.support.PercentRelativeLayout
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/iv_scan"
+                        android:layout_centerHorizontal="true"
+                        android:text="测试"
+                        android:textColor="@color/white"
+                        app:layout_textSizePercent="9.6%w" />
+
+                    <TextView
+                        android:id="@+id/tv_tpc_test"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_below="@id/iv_scan"
+                        android:layout_centerHorizontal="true"
+                        android:text="UID:17416"
+                        android:textColor="#D7D7D6"
+                        app:layout_textSizePercent="9.6%w" />
+
+                </com.zhy.android.percent.support.PercentRelativeLayout>
+
+                <View
+                    android:layout_width="@dimen/dp_0.5"
+                    android:layout_height="match_parent"
+                    android:background="@color/white" />
+
+                <com.zhy.android.percent.support.PercentRelativeLayout
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/iv_scan"
+                        android:layout_centerHorizontal="true"
+                        android:text="积分"
+                        android:textColor="@color/white"
+                        app:layout_textSizePercent="9.6%w" />
+
+                    <TextView
+                        android:id="@+id/tv_tpc_score"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_below="@id/iv_scan"
+                        android:layout_centerHorizontal="true"
+                        android:text="298.8012"
+                        android:textColor="#D7D7D6"
+                        app:layout_textSizePercent="9.6%w" />
+
+                </com.zhy.android.percent.support.PercentRelativeLayout>
+            </com.zhy.android.percent.support.PercentLinearLayout>
+        </com.zhy.android.percent.support.PercentRelativeLayout>
+
+    </com.zhy.android.percent.support.PercentLinearLayout>
+
+
+</android.support.v4.widget.NestedScrollView>

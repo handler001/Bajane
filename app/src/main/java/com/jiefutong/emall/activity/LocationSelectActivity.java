@@ -38,6 +38,7 @@ public class LocationSelectActivity extends BaseActivity implements View.OnClick
     private TextView mTvSave;
     private MapView mMap;
     private String address;
+    private String city;
     private double lat, lng;
     private AMap aMap;//地图对象
 
@@ -114,6 +115,7 @@ public class LocationSelectActivity extends BaseActivity implements View.OnClick
                 intent.putExtra("address", address);
                 intent.putExtra("lat", lat);
                 intent.putExtra("lng", lng);
+                intent.putExtra("city", city);
                 setResult(200, intent);
                 finish();
                 break;
@@ -242,6 +244,7 @@ public class LocationSelectActivity extends BaseActivity implements View.OnClick
     public void onRegeocodeSearched(RegeocodeResult regeocodeResult, int i) {
         RegeocodeAddress regeocodeAddress = regeocodeResult.getRegeocodeAddress();
         address = regeocodeAddress.getFormatAddress();
+        city = regeocodeAddress.getCity();
         showToast(address);
     }
 

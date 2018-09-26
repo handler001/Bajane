@@ -105,6 +105,7 @@ public class MallGoodsListActivity extends BaseActivity implements View.OnClickL
     protected void onDestroy() {
         super.onDestroy();
         OkGo.getInstance().cancelTag(this);
+        FragmentFactory.categorys.clear();
     }
 
     private void initadapter() {

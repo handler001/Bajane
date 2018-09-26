@@ -63,7 +63,7 @@
         <!-- 高德地图 -->
         <meta-data
             android:name="com.amap.api.v2.apikey"
-            android:value="ba162972bd3e1a0ddbed3ab9a1baff6e" />
+            android:value="e53c22031e290718e994d3dab403ae4f" />
 
         <service android:name="com.amap.api.location.APSService" />
         //微信
@@ -359,7 +359,9 @@
         <activity
             android:name=".activity.ShopSearchActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".activity.ShopDetailActivity"></activity>
+        <activity
+            android:name=".activity.ShopDetailActivity"
+            android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>

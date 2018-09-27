@@ -185,11 +185,11 @@ public class PersonCenterFragment extends BaseFragment implements View.OnClickLi
                 openActivity(DistributionSalesActivity.class);
                 break;
             case R.id.ll_person_dl:
-                if (flag == 1) {
-                    openActivity(new Intent(mctx, WebViewActivity.class).putExtra("url", HttpUtils.MEMBER_PAGE));
-                } else {
-                    openActivity(new Intent(mctx, WebViewActivity.class).putExtra("url", HttpUtils.MEMBER_PAGE_new));
-                }
+//                if (flag == 1) {
+//                    openActivity(new Intent(mctx, WebViewActivity.class).putExtra("url", HttpUtils.MEMBER_PAGE));
+//                } else {
+//                    openActivity(new Intent(mctx, WebViewActivity.class).putExtra("url", HttpUtils.MEMBER_PAGE_new));
+//                }
                 break;
             case R.id.ll_person_zc:
                 openActivity(MyAssetsActivity.class);

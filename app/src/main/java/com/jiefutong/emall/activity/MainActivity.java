@@ -166,7 +166,7 @@ public class MainActivity extends BaseActivity {
                     BottomNavigationViewHelper.disableShiftMode(mBnvMenu);
                     break;
                 case R.id.tpc:
-                    settitlewhite();
+                    settitleColor(R.color.tpc_bg);
                     mBnvMenu.getMenu().getItem(2).setChecked(true);
                     dealposition(2);
                     BottomNavigationViewHelper.disableShiftMode(mBnvMenu);

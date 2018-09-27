@@ -12,6 +12,7 @@ import com.bumptech.glide.Glide;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.jiefutong.emall.R;
+import com.jiefutong.emall.activity.GoodsCategoryListActivity;
 import com.jiefutong.emall.activity.MallGoodsListActivity;
 import com.jiefutong.emall.bean.GoodsCategoryBean;
 import com.jiefutong.emall.utils.GlideUtils;
@@ -50,6 +51,14 @@ public class GoodsCategoryAdapter extends BaseQuickAdapter<GoodsCategoryBean.Dat
         protected void convert(BaseViewHolder helper, final GoodsCategoryBean.DataMapBean.DataBean.ChildrenBean item) {
             helper.setText(R.id.tv_name, item.name);
             GlideUtils.loadpic(mContext, (ImageView) helper.getView(R.id.iv_detail), item.pic);
+            helper.itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    mContext.startActivity(new Intent(mContext, GoodsCategoryListActivity.class)
+                            .putExtra("id", item.id)
+                            .putExtra("name", item.name));
+                }
+            });
         }
     }
 }

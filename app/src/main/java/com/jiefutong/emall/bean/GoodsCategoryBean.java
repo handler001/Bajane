@@ -41,7 +41,7 @@ public class GoodsCategoryBean {
                  */
 
                 public String name;
-                public int id;
+                public String id;
                 public String pic;
             }
         }

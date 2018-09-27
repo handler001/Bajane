@@ -92,4 +92,17 @@
         android:textSize="@dimen/dp_14"
         android:visibility="gone" />
 
+    <TextView
+        android:id="@+id/tv_history"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:gravity="center"
+        android:paddingEnd="@dimen/dp_12"
+        android:paddingStart="@dimen/dp_12"
+        android:text="转出记录"
+        android:textColor="@color/text_black_9"
+        android:textSize="@dimen/dp_14"
+        android:visibility="gone" />
+
 </RelativeLayout>

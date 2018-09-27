@@ -28,11 +28,11 @@ public class ShopListAdapter extends BaseQuickAdapter<ShopListDetailsBean, BaseV
     }
 
     @Override
-    protected void convert(BaseViewHolder helper, ShopListDetailsBean item) {
+    protected void convert(BaseViewHolder helper, final ShopListDetailsBean item) {
         helper.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mContext.startActivity(new Intent(mContext, ShopDetailActivity.class));
+                mContext.startActivity(new Intent(mContext, ShopDetailActivity.class).putExtra("id", item.shopId));
             }
         });
         GlideUtils.loadpic(mContext, (ImageView) helper.getView(R.id.iv_pic), item.shopIcon);

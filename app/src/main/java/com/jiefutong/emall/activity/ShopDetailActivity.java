@@ -10,8 +10,14 @@ import android.widget.TextView;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.jiefutong.emall.R;
 import com.jiefutong.emall.adapter.ShopListAdapter;
+import com.jiefutong.emall.bean.ShopInfoDetailBean;
 import com.jiefutong.emall.bean.ShopListBean;
 import com.jiefutong.emall.bean.ShopListDetailsBean;
+import com.jiefutong.emall.utils.GlideUtils;
+import com.jiefutong.emall.utils.HttpUtils;
+import com.jiefutong.emall.utils.JsonUtil;
+import com.jiefutong.emall.utils.MyStringCallBack;
+import com.lzy.okgo.model.HttpParams;
 
 import java.util.ArrayList;
 
@@ -33,6 +39,7 @@ public class ShopDetailActivity extends BaseActivity implements View.OnClickList
     private ImageView mIvPhone;
     private ArrayList<ShopListDetailsBean> datas = new ArrayList<>();
     private BaseQuickAdapter adapter;
+    private String id;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +51,7 @@ public class ShopDetailActivity extends BaseActivity implements View.OnClickList
     }
 
     private void initView() {
+        id = getIntent().getStringExtra("id");
         mIvBack = (ImageView) findViewById(R.id.iv_back);
         mIvBack.setOnClickListener(this);
         mTvTitle = (TextView) findViewById(R.id.tv_title);
@@ -79,6 +87,64 @@ public class ShopDetailActivity extends BaseActivity implements View.OnClickList
     }
 
     private void initshop() {
-
+        HttpParams params = new HttpParams();
+        params.put("shopId", id);
+        HttpUtils.getNetData(HttpUtils.SHOP_INFO_DETAIL, this, params, new MyStringCallBack(context) {
+            @Override
+            protected void dealdata(String data) {
+                ShopInfoDetailBean bean = JsonUtil.parseObject(data, ShopInfoDetailBean.class);
+                if (bean != null && bean.code == HttpUtils.SUCCESS) {
+                    showshop(bean.dataMap);
+                }
+            }
+        });
     }
+
+    private void showshop(ShopInfoDetailBean.DataMapBean dataMap) {
+        GlideUtils.loadpic(context, mIvPic, dataMap.shopIcon);
+        mTvShopName.setText(dataMap.shopName);
+        mTvShopAddress.setText(dataMap.addressDesc);
+        adapter.addData(dataMap.nearList);
+        mTvSpe.setText(dataMap.shopPoint);
+        mTvIntro.setText(dataMap.shopIntroduce);
+        if (dataMap.shopSignDesc.size() == 5) {
+            mTvOne.setText(dataMap.shopSignDesc.get(0));
+            mTvTwo.setText(dataMap.shopSignDesc.get(1));
+            mTvThree.setText(dataMap.shopSignDesc.get(2));
+            mTvFour.setText(dataMap.shopSignDesc.get(3));
+            mTvFive.setText(dataMap.shopSignDesc.get(4));
+        } else if (dataMap.shopSignDesc.size() == 4) {
+            mTvOne.setText(dataMap.shopSignDesc.get(0));
+            mTvTwo.setText(dataMap.shopSignDesc.get(1));
+            mTvThree.setText(dataMap.shopSignDesc.get(2));
+            mTvFour.setText(dataMap.shopSignDesc.get(3));
+            mTvFive.setVisibility(View.GONE);
+        } else if (dataMap.shopSignDesc.size() == 3) {
+            mTvOne.setText(dataMap.shopSignDesc.get(0));
+            mTvTwo.setText(dataMap.shopSignDesc.get(1));
+            mTvThree.setText(dataMap.shopSignDesc.get(2));
+            mTvFour.setVisibility(View.GONE);
+            mTvFive.setVisibility(View.GONE);
+        } else if (dataMap.shopSignDesc.size() == 2) {
+            mTvOne.setText(dataMap.shopSignDesc.get(0));
+            mTvTwo.setText(dataMap.shopSignDesc.get(1));
+            mTvThree.setVisibility(View.GONE);
+            mTvFour.setVisibility(View.GONE);
+            mTvFive.setVisibility(View.GONE);
+        } else if (dataMap.shopSignDesc.size() == 1) {
+            mTvOne.setText(dataMap.shopSignDesc.get(0));
+            mTvTwo.setVisibility(View.GONE);
+            mTvThree.setVisibility(View.GONE);
+            mTvFour.setVisibility(View.GONE);
+            mTvFive.setVisibility(View.GONE);
+        } else {
+            mTvOne.setVisibility(View.GONE);
+            mTvTwo.setVisibility(View.GONE);
+            mTvThree.setVisibility(View.GONE);
+            mTvFour.setVisibility(View.GONE);
+            mTvFive.setVisibility(View.GONE);
+        }
+    }
+
+
 }

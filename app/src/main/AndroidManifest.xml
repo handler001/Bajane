@@ -361,6 +361,18 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".activity.ShopDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.MoneyTransOutActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.MoneyTransHistoryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.MoneyTransInActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.GoodsCategoryListActivity"
             android:screenOrientation="portrait"></activity>
     </application>
 

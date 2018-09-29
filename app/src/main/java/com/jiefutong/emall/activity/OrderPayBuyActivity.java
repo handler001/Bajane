@@ -13,6 +13,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.jaeger.library.StatusBarUtil;
 import com.jiefutong.emall.R;
 import com.jiefutong.emall.utils.FileUtil;
 import com.jiefutong.emall.utils.GlideUtils;
@@ -34,6 +35,7 @@ public class OrderPayBuyActivity extends BaseActivity implements View.OnClickLis
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_order_pay_buy);
+        StatusBarUtil.setTransparent(this);
         initView();
     }
 

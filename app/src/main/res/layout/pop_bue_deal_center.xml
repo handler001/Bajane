@@ -8,19 +8,19 @@
         android:id="@+id/tv_title"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp_48"
-        android:background="@drawable/shape_orange_bg_circle_tlr"
+        android:background="@drawable/shape_blue_bg_circle_tlr"
         android:gravity="center"
         android:text="操作协议"
         android:textColor="@color/white"
         android:textSize="@dimen/dp_16" />
 
     <!--<Button-->
-        <!--android:id="@+id/ib_cancle"-->
-        <!--android:layout_width="@dimen/dp_16"-->
-        <!--android:layout_height="@dimen/dp_16"-->
-        <!--android:layout_alignParentEnd="true"-->
-        <!--android:layout_margin="@dimen/dp_16"-->
-        <!--android:background="@mipmap/btn_close_guanbi" />-->
+    <!--android:id="@+id/ib_cancle"-->
+    <!--android:layout_width="@dimen/dp_16"-->
+    <!--android:layout_height="@dimen/dp_16"-->
+    <!--android:layout_alignParentEnd="true"-->
+    <!--android:layout_margin="@dimen/dp_16"-->
+    <!--android:background="@mipmap/btn_close_guanbi" />-->
 
     <TextView
         android:id="@+id/tv_money"
@@ -90,7 +90,7 @@
         android:layout_marginTop="@dimen/dp_16"
         android:gravity="center_vertical"
         android:text="保证协议：每次交易需要交纳保证金。"
-        android:textColor="#BBBBBB"
+        android:textColor="#8F9EAB"
         android:textSize="@dimen/dp_14" />
 
     <TextView
@@ -102,7 +102,7 @@
         android:layout_marginTop="@dimen/dp_6"
         android:gravity="center_vertical"
         android:text="等待交易完成后就会退回您的账户上。"
-        android:textColor="#BBBBBB"
+        android:textColor="#8F9EAB"
         android:textSize="@dimen/dp_14" />
 
     <Button
@@ -111,7 +111,7 @@
         android:layout_height="@dimen/dp_36"
         android:layout_below="@id/tv_two"
         android:layout_margin="@dimen/dp_28"
-        android:background="@drawable/shape_orange_bg"
+        android:background="@drawable/shape_blue_bg"
         android:text="同意"
         android:textColor="@color/white"
         android:textSize="@dimen/dp_16" />

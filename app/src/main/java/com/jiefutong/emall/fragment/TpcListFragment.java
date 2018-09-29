@@ -14,6 +14,7 @@ import com.jiefutong.emall.activity.CenterBargainActivity;
 import com.jiefutong.emall.activity.MoneyTransInActivity;
 import com.jiefutong.emall.activity.MoneyTransOutActivity;
 import com.jiefutong.emall.activity.ProductDetailActivity;
+import com.jiefutong.emall.activity.TpcFriendShareActivity;
 import com.jiefutong.emall.activity.WebViewActivity;
 import com.jiefutong.emall.bean.BannerBean;
 import com.jiefutong.emall.utils.GlideUtils;
@@ -124,6 +125,7 @@ public class TpcListFragment extends BaseFragment implements View.OnClickListene
             case R.id.ll_mall:
                 break;
             case R.id.ll_share:
+                openActivity(TpcFriendShareActivity.class);
                 break;
             case R.id.ll_exchange:
                 break;

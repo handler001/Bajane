@@ -66,7 +66,7 @@ public class MoneyTransHistoryActivity extends BaseActivity implements View.OnCl
 
         @Override
         protected void convert(BaseViewHolder helper, String item) {
-
+            helper.setTextColor(R.id.tv_goods_num, getcolor(R.color.tpc_exchange_blue));
         }
     }
 }

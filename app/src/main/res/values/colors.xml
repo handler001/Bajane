@@ -88,4 +88,6 @@
     <color name="title_org_sel">#FE6927</color>
     <color name="tpc_bg">#3D3E41</color>
     <color name="tpc_trans_in_bg">#408CE2</color>
+    <color name="tpc_exchange_blue">#6184CC</color>
+    <color name="tpc_money_sel">#0999E4</color>
 </resources>

@@ -9,10 +9,10 @@
         android:id="@+id/tv_money"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/shape_orange_bg_post_stroke"
+        android:background="@drawable/shape_blue_bg_post_stroke"
         android:gravity="center"
         android:text="500"
-        android:textColor="@color/title_org_sel"
+        android:textColor="#0999E4"
         app:layout_heightPercent="32%w"
         app:layout_textSizePercent="16%w" />
 

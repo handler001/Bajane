@@ -101,7 +101,7 @@ public class TpcOrderMeActivity extends BaseActivity implements View.OnClickList
     private void dealposition(int i) {
         if (i == 0) {
             pos = 0;
-            mTvAll.setTextColor(getcolor(R.color.title_org_sel));
+            mTvAll.setTextColor(getcolor(R.color.tpc_money_sel));
             mTvState.setTextColor(getcolor(R.color.text_black_3));
             mIvAll.setBackgroundResource(R.mipmap.btn_upward);
             mIvState.setBackgroundResource(R.mipmap.btn_down_xiangxia);
@@ -109,7 +109,7 @@ public class TpcOrderMeActivity extends BaseActivity implements View.OnClickList
         } else if (i == 1) {
             pos = 1;
             mTvAll.setTextColor(getcolor(R.color.text_black_3));
-            mTvState.setTextColor(getcolor(R.color.title_org_sel));
+            mTvState.setTextColor(getcolor(R.color.tpc_money_sel));
             mIvAll.setBackgroundResource(R.mipmap.btn_down_xiangxia);
             mIvState.setBackgroundResource(R.mipmap.btn_upward);
             showpop(i);
@@ -159,7 +159,7 @@ public class TpcOrderMeActivity extends BaseActivity implements View.OnClickList
         @Override
         protected void convert(BaseViewHolder helper, final String item) {
             if (item.equals(all) || item.equals(state)) {
-                helper.setTextColor(R.id.tv_name, getcolor(R.color.title_org_sel));
+                helper.setTextColor(R.id.tv_name, getcolor(R.color.tpc_money_sel));
             } else {
                 helper.setTextColor(R.id.tv_name, getcolor(R.color.text_black_3));
             }

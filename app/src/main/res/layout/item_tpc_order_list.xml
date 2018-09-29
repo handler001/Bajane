@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/dp_16"
         android:text="购买TPC"
-        android:textColor="#FB7C2F"
+        android:textColor="@color/tpc_money_sel"
         android:textSize="@dimen/dp_16" />
 
     <TextView

@@ -386,7 +386,9 @@
         <activity
             android:name=".activity.OrderPayActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".activity.OrderPayBuyActivity"></activity>
+        <activity android:name=".activity.OrderPayBuyActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".activity.OrderStateDetailActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".activity.TpcFriendShareActivity" android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>

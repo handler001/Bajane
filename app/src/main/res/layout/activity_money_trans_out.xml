@@ -4,9 +4,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/bg_act_gray"
+    android:fitsSystemWindows="true"
     android:focusable="true"
-    android:focusableInTouchMode="true"
-    android:fitsSystemWindows="true">
+    android:focusableInTouchMode="true">
 
     <include
         layout="@layout/common_title_bar"
@@ -56,7 +56,7 @@
         android:layout_marginEnd="@dimen/dp_10"
         android:layout_marginStart="@dimen/dp_10"
         android:layout_marginTop="@dimen/dp_20"
-        android:background="@drawable/shape_orange_bg_gradient"
+        android:background="@drawable/shape_blue_bg_gradient"
         android:text="下一步"
         android:textColor="@color/white"
         android:textSize="@dimen/dp_16" />

@@ -26,10 +26,10 @@ public class BargainMoneyAdapter extends BaseQuickAdapter<BargainMoneyBean.DataM
         int position = helper.getLayoutPosition();
         if (position == pos) {
             helper.setTextColor(R.id.tv_money, ResourceUtils.getColor(mContext, R.color.white));
-            helper.setBackgroundRes(R.id.tv_money, R.drawable.shape_orange_bg_tpc_money);
+            helper.setBackgroundRes(R.id.tv_money, R.drawable.shape_blue_bg_tpc_money);
         } else {
-            helper.setTextColor(R.id.tv_money, ResourceUtils.getColor(mContext, R.color.title_org_sel));
-            helper.setBackgroundRes(R.id.tv_money, R.drawable.shape_orange_bg_post_stroke);
+            helper.setTextColor(R.id.tv_money, ResourceUtils.getColor(mContext, R.color.tpc_money_sel));
+            helper.setBackgroundRes(R.id.tv_money, R.drawable.shape_blue_bg_post_stroke);
         }
         helper.setText(R.id.tv_money, item.productNum);
     }

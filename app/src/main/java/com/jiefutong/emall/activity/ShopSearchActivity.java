@@ -1,10 +1,12 @@
 package com.jiefutong.emall.activity;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -200,10 +202,10 @@ public class ShopSearchActivity extends BaseActivity implements View.OnClickList
                 }
             });
             popupWindow = new PopupWindow(view, LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT);
-            popupWindow.showAsDropDown(mLlAll);
+            showPop(mLlAll);
         } else {
             listAdapter.notifyDataSetChanged();
-            popupWindow.showAsDropDown(mLlAll);
+            showPop(mLlAll);
         }
     }
 
@@ -230,6 +232,16 @@ public class ShopSearchActivity extends BaseActivity implements View.OnClickList
                     dealposition(4);
                 }
             });
+        }
+    }
+
+    private void showPop(View v) {
+        if (android.os.Build.VERSION.SDK_INT >= 24) {
+            int[] a = new int[2];
+            v.getLocationInWindow(a);
+            popupWindow.showAtLocation(((Activity) context).getWindow().getDecorView(), Gravity.NO_GRAVITY, 0, a[1] + v.getHeight());
+        } else {
+            popupWindow.showAsDropDown(v);
         }
     }
 }

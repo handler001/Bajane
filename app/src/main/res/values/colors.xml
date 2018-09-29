@@ -87,4 +87,5 @@
     <color name="main_sel">#FE6E4C</color>
     <color name="title_org_sel">#FE6927</color>
     <color name="tpc_bg">#3D3E41</color>
+    <color name="tpc_trans_in_bg">#408CE2</color>
 </resources>

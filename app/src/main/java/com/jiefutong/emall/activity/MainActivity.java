@@ -1,5 +1,6 @@
 package com.jiefutong.emall.activity;
 
+import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
@@ -14,6 +15,7 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AlertDialog;
 import android.text.TextUtils;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.KeyEvent;
 import android.view.MenuItem;
 import android.view.View;
@@ -140,6 +142,8 @@ public class MainActivity extends BaseActivity {
         mBnvMenu.setOnNavigationItemSelectedListener(listener);
         if (position == 4) {
             settitleOrange();
+        } else if (position == 2) {
+            settitleColor(R.color.tpc_bg);
         } else {
             settitlewhite();
         }

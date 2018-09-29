@@ -67,13 +67,13 @@ public class WalletActivity extends BaseActivity implements View.OnClickListener
                 break;
             case R.id.tv_bank:
                 if (!TextUtils.isEmpty(money)) {
-                    openActivity(new Intent(context, BankTakeActivity.class).putExtra("money", money));
+                    //openActivity(new Intent(context, BankTakeActivity.class).putExtra("money", money));
                 }
                 break;
             case R.id.tv_ali:
-                if (!TextUtils.isEmpty(money)) {
-                    openActivity(new Intent(context, AliTakeActivity.class).putExtra("money", money));
-                }
+//                if (!TextUtils.isEmpty(money)) {
+//                    openActivity(new Intent(context, AliTakeActivity.class).putExtra("money", money));
+//                }
                 break;
             case R.id.tv_detail:
                 openActivity(TakeDetailsActivity.class);

@@ -7,8 +7,8 @@ android {
         applicationId "com.jiefutong.emall"
         minSdkVersion 19
         targetSdkVersion 26
-        versionCode 20180925
-        versionName "1.0.1 "
+        versionCode 20180927
+        versionName "1.0.2 "
         multiDexEnabled true
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 

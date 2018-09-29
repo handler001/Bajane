@@ -218,6 +218,8 @@ public class HttpUtils {
     public static String SHOP_NEAR_LIST = "/app/shop/nearList";
     //商家详情
     public static String SHOP_INFO_DETAIL = "/app/shop/shopDetail";
+    //买入和卖出商品列表
+    public static String TPC_LIST_PRO = "/app/tcpProduct/list";
     //h5页面信息
     //收益榜说明
     public static String INCOME_LIST_EXPLAIN_PAGE = "http://bjn.leetx.net/bjnhtml/IncomeList.html";

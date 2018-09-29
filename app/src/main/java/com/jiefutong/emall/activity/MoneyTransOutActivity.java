@@ -1,5 +1,6 @@
 package com.jiefutong.emall.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -49,7 +50,7 @@ public class MoneyTransOutActivity extends BaseActivity implements View.OnClickL
                 finish();
                 break;
             case R.id.tv_history:
-                openActivity(MoneyTransHistoryActivity.class);
+                openActivity(new Intent(context,MoneyTransHistoryActivity.class).putExtra("name","转出记录"));
                 break;
         }
     }

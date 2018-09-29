@@ -23,11 +23,13 @@ public class MoneyTransHistoryActivity extends BaseActivity implements View.OnCl
     private View empty;
     private ArrayList<String> datas = new ArrayList<>();
     private BaseQuickAdapter adapter;
+    private String name;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_money_trans_history);
+        name = getIntent().getStringExtra("name");
         initView();
         settitlewhite();
     }
@@ -35,11 +37,11 @@ public class MoneyTransHistoryActivity extends BaseActivity implements View.OnCl
     private void initView() {
         empty = View.inflate(context, R.layout.view_order_empty, null);
         TextView info = empty.findViewById(R.id.tv_info);
-        info.setText("暂时没有转出记录哦~");
+        info.setText("暂时没有记录哦~");
         mIvBack = (ImageView) findViewById(R.id.iv_back);
         mIvBack.setOnClickListener(this);
         mTvTitle = (TextView) findViewById(R.id.tv_title);
-        mTvTitle.setText("转出记录");
+        mTvTitle.setText(name);
         mRlv = (RecyclerView) findViewById(R.id.rlv);
         mRlv.setLayoutManager(new LinearLayoutManager(context));
         adapter = new HistoryAdapter(R.layout.item_frag_balance_info, datas);

@@ -331,6 +331,7 @@ public class HomePageFragment extends BaseFragment implements View.OnClickListen
                         openActivity(AllianceMerchantActivity.class);
                     }
                 };
+                //  showToast("开发中");
                 break;
             case R.id.ll_video:
                 openActivity(VideoListActivity.class);

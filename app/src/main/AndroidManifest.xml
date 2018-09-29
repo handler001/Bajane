@@ -373,7 +373,20 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".activity.GoodsCategoryListActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.CenterBargainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.TpcOrderMeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.BusinessDealActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.OrderPayActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.OrderPayBuyActivity"></activity>
     </application>
 
 </manifest>

@@ -1,9 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.zhy.android.percent.support.PercentLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.MoneyTransInActivity">
+    android:background="@color/tpc_trans_in_bg"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
 
-</android.support.constraint.ConstraintLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_48">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/dp_14"
+            android:paddingEnd="@dimen/dp_10"
+            android:paddingStart="@dimen/dp_10"
+            android:paddingTop="@dimen/dp_14"
+            android:src="@drawable/back_white" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dp_16" />
+
+    </RelativeLayout>
+
+
+    <com.zhy.android.percent.support.PercentLinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dp_20"
+        android:background="@drawable/shape_white_bg"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:layout_heightPercent="100%w"
+        app:layout_widthPercent="90%w">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="扫一扫，向我付款"
+            android:textColor="@color/text_black_3"
+            app:layout_marginTopPercent="12%w"
+            app:layout_textSizePercent="4.8%w" />
+
+        <ImageView
+            android:id="@+id/iv_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_heightPercent="50%w"
+            app:layout_marginTopPercent="10%w"
+            app:layout_widthPercent="50%w" />
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_0.5"
+            android:background="#E5E5E5"
+            app:layout_marginTopPercent="14%w"
+            app:layout_widthPercent="90%w" />
+
+        <TextView
+            android:id="@+id/tv_record"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:drawableEnd="@mipmap/enter_gray"
+            android:drawablePadding="@dimen/dp_10"
+            android:drawableStart="@mipmap/btn_transferrecords"
+            android:gravity="center_vertical"
+            android:text="转入记录"
+            android:textColor="@color/text_black_3"
+            app:layout_marginBottomPercent="2%w"
+            app:layout_marginTopPercent="2%w"
+            app:layout_textSizePercent="4.8%w"
+            app:layout_widthPercent="90%w" />
+
+    </com.zhy.android.percent.support.PercentLinearLayout>
+
+
+</com.zhy.android.percent.support.PercentLinearLayout>

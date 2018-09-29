@@ -67,7 +67,7 @@
                         android:layout_alignParentBottom="true"
                         android:layout_below="@id/iv_scan"
                         android:layout_centerHorizontal="true"
-                        android:text="1.1988"
+                        android:text="0.00"
                         android:textColor="#D7D7D6"
                         app:layout_textSizePercent="9.6%w" />
 
@@ -133,7 +133,7 @@
                         android:layout_alignParentBottom="true"
                         android:layout_below="@id/iv_scan"
                         android:layout_centerHorizontal="true"
-                        android:text="298.8012"
+                        android:text="0"
                         android:textColor="#D7D7D6"
                         app:layout_textSizePercent="9.6%w" />
 
@@ -240,7 +240,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/dp_10"
-                    android:text="买入"
+                    android:text="交易"
                     android:textColor="@color/text_black_3"
                     app:layout_textSizePercent="12%w" />
 
@@ -280,7 +280,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/dp_10"
-                    android:text="卖出"
+                    android:text="行情"
                     android:textColor="@color/text_black_3"
                     app:layout_textSizePercent="12%w" />
 

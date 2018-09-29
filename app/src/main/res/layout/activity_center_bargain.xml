@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_act_gray"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_title_bar" />
+
+    <com.zhengsr.viewpagerlib.indicator.TabIndicator
+        android:id="@+id/tab"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_48"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/white"
+        app:tab_color="@color/tab_sel"
+        app:tab_height="@dimen/dp_1"
+        app:tab_show="true"
+        app:tab_text_change_color="@color/tab_text_sel"
+        app:tab_text_default_color="@color/tab_text_nor"
+        app:tab_text_type="normaltext"
+        app:tab_textsize="@dimen/dp_14"
+        app:tab_width="@dimen/dp_40"
+        app:tap_type="rect"
+        app:visiabel_size="2" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_content"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_0"
+        android:layout_weight="1"
+        android:background="#F0F2F4" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_56"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_order_creat"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#FB7C2F"
+            android:gravity="center"
+            android:text="创建订单"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dp_16" />
+
+
+        <TextView
+            android:id="@+id/tv_my_order"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#408CE2"
+            android:gravity="center"
+            android:text="我的订单"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dp_16" />
+
+    </LinearLayout>
+</LinearLayout>

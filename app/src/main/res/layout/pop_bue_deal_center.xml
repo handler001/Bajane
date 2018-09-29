@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/dp_320"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_white_bg">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_48"
+        android:background="@drawable/shape_orange_bg_circle_tlr"
+        android:gravity="center"
+        android:text="操作协议"
+        android:textColor="@color/white"
+        android:textSize="@dimen/dp_16" />
+
+    <!--<Button-->
+        <!--android:id="@+id/ib_cancle"-->
+        <!--android:layout_width="@dimen/dp_16"-->
+        <!--android:layout_height="@dimen/dp_16"-->
+        <!--android:layout_alignParentEnd="true"-->
+        <!--android:layout_margin="@dimen/dp_16"-->
+        <!--android:background="@mipmap/btn_close_guanbi" />-->
+
+    <TextView
+        android:id="@+id/tv_money"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:layout_below="@id/tv_title"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_10"
+        android:gravity="center_vertical"
+        android:text="本次交易：500"
+        android:textColor="@color/text_black_3"
+        android:textSize="@dimen/dp_16" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:layout_below="@id/tv_money"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:layout_marginStart="@dimen/dp_16"
+        android:background="@mipmap/img_xuline_help_xuxian" />
+
+    <TextView
+        android:id="@+id/tv_sx"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:layout_below="@id/tv_money"
+        android:layout_marginStart="@dimen/dp_16"
+        android:gravity="center_vertical"
+        android:text="本次交易手续费：0.500"
+        android:textColor="@color/text_black_3"
+        android:textSize="@dimen/dp_16" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:layout_below="@id/tv_sx"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:layout_marginStart="@dimen/dp_16"
+        android:background="@mipmap/img_xuline_help_xuxian" />
+
+
+    <TextView
+        android:id="@+id/tv_bzj"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:layout_below="@id/tv_sx"
+        android:layout_marginStart="@dimen/dp_16"
+        android:gravity="center_vertical"
+        android:text="保证金：100.00"
+        android:textColor="@color/text_black_3"
+        android:textSize="@dimen/dp_16" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:layout_below="@id/tv_bzj"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:layout_marginStart="@dimen/dp_16"
+        android:background="@mipmap/img_xuline_help_xuxian" />
+
+    <TextView
+        android:id="@+id/tv_one"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_20"
+        android:layout_below="@id/tv_bzj"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_16"
+        android:gravity="center_vertical"
+        android:text="保证协议：每次交易需要交纳保证金。"
+        android:textColor="#BBBBBB"
+        android:textSize="@dimen/dp_14" />
+
+    <TextView
+        android:id="@+id/tv_two"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_20"
+        android:layout_below="@id/tv_one"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_6"
+        android:gravity="center_vertical"
+        android:text="等待交易完成后就会退回您的账户上。"
+        android:textColor="#BBBBBB"
+        android:textSize="@dimen/dp_14" />
+
+    <Button
+        android:id="@+id/bt_agree"
+        android:layout_width="@dimen/dp_72"
+        android:layout_height="@dimen/dp_36"
+        android:layout_below="@id/tv_two"
+        android:layout_margin="@dimen/dp_28"
+        android:background="@drawable/shape_orange_bg"
+        android:text="同意"
+        android:textColor="@color/white"
+        android:textSize="@dimen/dp_16" />
+
+    <Button
+        android:id="@+id/bt_cancle"
+        android:layout_width="@dimen/dp_72"
+        android:layout_height="@dimen/dp_36"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/tv_two"
+        android:layout_margin="@dimen/dp_28"
+        android:background="@drawable/shape_gray_bg"
+        android:text="取消"
+        android:textColor="@color/white"
+        android:textSize="@dimen/dp_16" />
+
+</RelativeLayout>

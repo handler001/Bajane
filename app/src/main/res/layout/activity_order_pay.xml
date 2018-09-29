@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/img_gradualchange"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_48">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/dp_14"
+            android:paddingEnd="@dimen/dp_10"
+            android:paddingStart="@dimen/dp_10"
+            android:paddingTop="@dimen/dp_14"
+            android:src="@drawable/back_white" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dp_16" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_80">
+
+        <TextView
+            android:id="@+id/tv_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_20"
+            android:text="请付款"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dp_16" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_state"
+            android:layout_marginStart="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_6"
+            android:text="您已成功下单，请及时付款"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dp_12" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/dp_16"
+            android:background="@mipmap/img_no_order" />
+
+    </RelativeLayout>
+
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_act_gray">
+
+        <com.zhy.android.percent.support.PercentRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_16"
+            android:background="@mipmap/img_irregular_bg"
+            app:layout_heightPercent="100%w"
+            app:layout_widthPercent="96%w">
+
+            <TextView
+                android:id="@+id/tv_pay_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_16"
+                android:text="请向以下账户付款"
+                android:textColor="#88959E"
+                app:layout_marginTopPercent="3.6%w"
+                app:layout_textSizePercent="3.2%w" />
+
+            <TextView
+                android:id="@+id/tv_pay_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_pay_name"
+                android:layout_marginStart="@dimen/dp_16"
+                android:text="￥0.00"
+                android:textColor="#FB7C2F"
+                app:layout_marginTopPercent="2%w"
+                app:layout_textSizePercent="4.8%w" />
+
+            <TextView
+                android:id="@+id/tv_pay_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/dp_16"
+                android:text="￥6.87"
+                android:textColor="#88959E"
+                app:layout_marginTopPercent="3.8%w"
+                app:layout_textSizePercent="3.2%w" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:text="交易单价"
+                android:textColor="#88959E"
+                app:layout_marginEndPercent="30%w"
+                app:layout_marginTopPercent="3.8%w"
+                app:layout_textSizePercent="3.2%w" />
+
+            <TextView
+                android:id="@+id/tv_pay_money_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@id/tv_pay_money"
+                android:layout_marginEnd="@dimen/dp_16"
+                android:text="2500.0000TPC"
+                android:textColor="#88959E"
+                app:layout_marginTopPercent="3%w"
+                app:layout_textSizePercent="3.2%w" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@id/tv_pay_money"
+                android:text="交易数量"
+                android:textColor="#88959E"
+                app:layout_marginEndPercent="30%w"
+                app:layout_marginTopPercent="3%w"
+                app:layout_textSizePercent="3.2%w" />
+
+            <TextView
+                android:id="@+id/tv_pay_method"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_pay_total"
+                android:layout_marginStart="@dimen/dp_16"
+                android:drawablePadding="@dimen/dp_10"
+                android:drawableStart="@mipmap/icon_bankcard_yinhangka"
+                android:gravity="center_vertical"
+                android:text="银行卡"
+                android:textColor="#88959E"
+                app:layout_heightPercent="10%w"
+                app:layout_marginTopPercent="4%w"
+                app:layout_textSizePercent="4%w" />
+
+            <TextView
+                android:id="@+id/tv_pay_method_change"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@id/tv_pay_total"
+                android:layout_marginEnd="@dimen/dp_16"
+                android:layout_marginStart="@dimen/dp_16"
+                android:drawableEnd="@mipmap/btn_meelse_enter"
+                android:drawablePadding="@dimen/dp_10"
+                android:gravity="center_vertical"
+                android:text="切换方式"
+                android:textColor="#8A9090"
+                app:layout_heightPercent="10%w"
+                app:layout_marginTopPercent="4%w"
+                app:layout_textSizePercent="3.6%w" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_0.5"
+                android:layout_below="@id/tv_pay_method"
+                android:layout_marginEnd="@dimen/dp_16"
+                android:layout_marginStart="@dimen/dp_16"
+                android:background="#E5E5E5" />
+
+            <TextView
+                android:id="@+id/tv_pay_bank"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@id/tv_pay_method"
+                android:layout_marginEnd="@dimen/dp_16"
+                android:layout_marginStart="@dimen/dp_16"
+                android:gravity="center_vertical"
+                android:text="中国招商银行"
+                android:textColor="#88969F"
+                app:layout_heightPercent="10%w"
+                app:layout_textSizePercent="3.6%w" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_pay_method"
+                android:layout_marginStart="@dimen/dp_16"
+                android:gravity="center_vertical"
+                android:text="银行卡信息"
+                android:textColor="#88969F"
+                app:layout_heightPercent="10%w"
+                app:layout_textSizePercent="3.6%w" />
+
+            <TextView
+                android:id="@+id/tv_pay_person"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@id/tv_pay_bank"
+                android:layout_marginEnd="@dimen/dp_16"
+                android:layout_marginStart="@dimen/dp_16"
+                android:gravity="center_vertical"
+                android:text="周团团"
+                android:textColor="#88969F"
+                app:layout_heightPercent="8%w"
+                app:layout_textSizePercent="3.6%w" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_pay_bank"
+                android:layout_marginStart="@dimen/dp_16"
+                android:gravity="center_vertical"
+                android:text="收款人"
+                android:textColor="#88969F"
+                app:layout_heightPercent="8%w"
+                app:layout_textSizePercent="3.6%w" />
+
+            <TextView
+                android:id="@+id/tv_pay_bank_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@id/tv_pay_person"
+                android:layout_marginEnd="@dimen/dp_16"
+                android:layout_marginStart="@dimen/dp_16"
+                android:gravity="center_vertical"
+                android:text="6214837211966357"
+                android:textColor="#88969F"
+                app:layout_heightPercent="10%w"
+                app:layout_textSizePercent="3.6%w" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_pay_person"
+                android:layout_marginStart="@dimen/dp_16"
+                android:gravity="center_vertical"
+                android:text="银行卡卡号"
+                android:textColor="#88969F"
+                app:layout_heightPercent="10%w"
+                app:layout_textSizePercent="3.6%w" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_0.5"
+                android:layout_below="@id/tv_pay_bank_code"
+                android:layout_marginEnd="@dimen/dp_16"
+                android:layout_marginStart="@dimen/dp_16"
+                android:background="#E5E5E5" />
+
+            <ImageView
+                android:id="@+id/iv_pic_select"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_pay_bank_code"
+                android:layout_marginStart="@dimen/dp_16"
+                android:background="@mipmap/img_uploadapicture_fukuan"
+                app:layout_heightPercent="24%w"
+                app:layout_marginTopPercent="4%w"
+                app:layout_widthPercent="24%w" />
+
+            <TextView
+                android:id="@+id/tv_one"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_pay_bank_code"
+                android:layout_marginEnd="@dimen/dp_16"
+                android:layout_marginStart="@dimen/dp_16"
+                android:layout_toEndOf="@id/iv_pic_select"
+                android:text="如您已向卖家转账付款，请务必点击右下角"
+                android:textColor="#FB7C2F"
+                app:layout_marginTopPercent="10%w"
+                app:layout_textSizePercent="3%w" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_one"
+                android:layout_marginEnd="@dimen/dp_16"
+                android:layout_marginStart="@dimen/dp_12"
+                android:layout_toEndOf="@id/iv_pic_select"
+                android:text="“我已付款”按钮，否则有可能造成资金损失。"
+                android:textColor="#FB7C2F"
+                app:layout_marginTopPercent="1%w"
+                app:layout_textSizePercent="3%w" />
+
+            <Button
+                android:id="@+id/bt_cancle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_pic_select"
+                android:layout_marginStart="@dimen/dp_16"
+                android:background="@drawable/shape_orange_bg"
+                android:text="取消订单"
+                android:textColor="@color/white"
+                app:layout_heightPercent="10%w"
+                app:layout_marginTopPercent="4.8%w"
+                app:layout_textSizePercent="4%w"
+                app:layout_widthPercent="27%w" />
+
+            <Button
+                android:id="@+id/bt_submit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@id/iv_pic_select"
+                android:layout_marginEnd="@dimen/dp_16"
+                android:background="@drawable/shape_blue_bg"
+                android:text="我已付款"
+                android:textColor="@color/white"
+                app:layout_heightPercent="10%w"
+                app:layout_marginTopPercent="4.8%w"
+                app:layout_textSizePercent="4%w"
+                app:layout_widthPercent="27%w" />
+
+        </com.zhy.android.percent.support.PercentRelativeLayout>
+
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+
+</LinearLayout>

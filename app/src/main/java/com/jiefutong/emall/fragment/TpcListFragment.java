@@ -1,5 +1,6 @@
 package com.jiefutong.emall.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,12 +9,26 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.jiefutong.emall.R;
+import com.jiefutong.emall.activity.BannerWebActivity;
+import com.jiefutong.emall.activity.CenterBargainActivity;
 import com.jiefutong.emall.activity.MoneyTransInActivity;
 import com.jiefutong.emall.activity.MoneyTransOutActivity;
+import com.jiefutong.emall.activity.ProductDetailActivity;
+import com.jiefutong.emall.activity.WebViewActivity;
+import com.jiefutong.emall.bean.BannerBean;
+import com.jiefutong.emall.utils.GlideUtils;
 import com.lzy.okgo.OkGo;
+import com.zhengsr.viewpagerlib.anim.MzTransformer;
+import com.zhengsr.viewpagerlib.bean.PageBean;
+import com.zhengsr.viewpagerlib.callback.PageHelperListener;
 import com.zhengsr.viewpagerlib.indicator.ZoomIndicator;
 import com.zhengsr.viewpagerlib.view.BannerViewPager;
 import com.zhy.android.percent.support.PercentLinearLayout;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import io.realm.internal.Context;
 
 /**
  * @Author l
@@ -53,7 +68,9 @@ public class TpcListFragment extends BaseFragment implements View.OnClickListene
 
     @Override
     protected void loadData() {
-
+        ArrayList<Integer> data = new ArrayList<>();
+        data.add(R.mipmap.icon_banner);
+        initbanner(data);
     }
 
     @Override
@@ -95,9 +112,10 @@ public class TpcListFragment extends BaseFragment implements View.OnClickListene
                 openActivity(MoneyTransOutActivity.class);
                 break;
             case R.id.ll_over:
-                //openActivity(MoneyTransInActivity.class);
+                openActivity(MoneyTransInActivity.class);
                 break;
             case R.id.ll_buy:
+                openActivity(new Intent(mctx, CenterBargainActivity.class).putExtra("type", 0));
                 break;
             case R.id.ll_sell:
                 break;
@@ -111,8 +129,22 @@ public class TpcListFragment extends BaseFragment implements View.OnClickListene
                 break;
             case R.id.ll_buss:
                 break;
-
-
         }
+    }
+
+    private void initbanner(final List<Integer> dataMap) {
+        PageBean bean = new PageBean.Builder<Integer>()
+                .setDataObjects(dataMap)
+                .setIndicator(mBottomScaleLayout)
+                .builder();
+        mLoopViewpager.setPageTransformer(false, new MzTransformer());
+        mLoopViewpager.setPageListener(bean, R.layout.item_banner_pic, new PageHelperListener() {
+            @Override
+            public void getItemView(View view, Object o) {
+                ImageView mpic = view.findViewById(R.id.iv_pic);
+                Integer dataMapBean = (Integer) o;
+                GlideUtils.loadpicId(mctx, mpic, dataMapBean);
+            }
+        });
     }
 }

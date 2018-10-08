@@ -96,18 +96,20 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
                 android:layout_marginEnd="@dimen/dp_16"
+                android:gravity="end"
                 android:text="2018-09-28 17:31"
                 android:textColor="#88959E"
                 app:layout_marginTopPercent="2.8%w"
-                app:layout_textSizePercent="3.2%w" />
+                app:layout_textSizePercent="3.2%w"
+                app:layout_widthPercent="28%w" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/dp_6"
+                android:layout_toStartOf="@id/tv_pay_time"
                 android:text="交易时间"
                 android:textColor="#88959E"
-                app:layout_marginEndPercent="32%w"
                 app:layout_marginTopPercent="2.8%w"
                 app:layout_textSizePercent="3.2%w" />
 
@@ -118,19 +120,21 @@
                 android:layout_alignParentEnd="true"
                 android:layout_below="@id/tv_pay_time"
                 android:layout_marginEnd="@dimen/dp_16"
+                android:gravity="end"
                 android:text="2500.0000TPC"
                 android:textColor="#88959E"
                 app:layout_marginTopPercent="1%w"
-                app:layout_textSizePercent="3.2%w" />
+                app:layout_textSizePercent="3.2%w"
+                app:layout_widthPercent="28%w" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
                 android:layout_below="@id/tv_pay_time"
+                android:layout_marginEnd="@dimen/dp_6"
+                android:layout_toStartOf="@id/tv_pay_money_num"
                 android:text="交易数量"
                 android:textColor="#88959E"
-                app:layout_marginEndPercent="32%w"
                 app:layout_marginTopPercent="1%w"
                 app:layout_textSizePercent="3.2%w" />
 

@@ -11,9 +11,12 @@ import android.widget.TextView;
 import com.jiefutong.emall.R;
 import com.jiefutong.emall.activity.BannerWebActivity;
 import com.jiefutong.emall.activity.CenterBargainActivity;
+import com.jiefutong.emall.activity.ExchangeAreaActivity;
 import com.jiefutong.emall.activity.MoneyTransInActivity;
 import com.jiefutong.emall.activity.MoneyTransOutActivity;
 import com.jiefutong.emall.activity.ProductDetailActivity;
+import com.jiefutong.emall.activity.QuotesActivity;
+import com.jiefutong.emall.activity.TpcAssetsActivity;
 import com.jiefutong.emall.activity.TpcFriendShareActivity;
 import com.jiefutong.emall.activity.WebViewActivity;
 import com.jiefutong.emall.bean.BannerBean;
@@ -119,8 +122,10 @@ public class TpcListFragment extends BaseFragment implements View.OnClickListene
                 openActivity(new Intent(mctx, CenterBargainActivity.class).putExtra("type", 0));
                 break;
             case R.id.ll_sell:
+                openActivity(QuotesActivity.class);
                 break;
             case R.id.ll_money:
+                openActivity(TpcAssetsActivity.class);
                 break;
             case R.id.ll_mall:
                 break;

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_120"
+    android:background="@color/white"
+    android:paddingEnd="@dimen/dp_16"
+    android:paddingStart="@dimen/dp_16">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_0.5"
+        android:background="#E5E5E5" />
+
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_16"
+        android:drawablePadding="@dimen/dp_6"
+        android:drawableStart="@drawable/shape_blue_piece"
+        android:text="电子积分"
+        android:textColor="@color/text_black_3"
+        android:textSize="@dimen/dp_18" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/tv_name"
+        android:layout_marginStart="@dimen/dp_4"
+        android:layout_toEndOf="@id/tv_name"
+        android:text="/TPC"
+        android:textColor="#C2CAD1"
+        android:textSize="@dimen/dp_12" />
+
+    <TextView
+        android:id="@+id/tv_type_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_name"
+        android:layout_marginTop="@dimen/dp_10"
+        android:text="6574.83"
+        android:textColor="#1E3650"
+        android:textSize="@dimen/dp_14" />
+
+    <TextView
+        android:id="@+id/tv_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_name"
+        android:layout_marginTop="@dimen/dp_40"
+        android:text="￥44938.96"
+        android:textColor="#99A7B3"
+        android:textSize="@dimen/dp_14" />
+
+    <TextView
+        android:id="@+id/tv_count_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp_10"
+        android:text="-0.62%"
+        android:textColor="#1E3650"
+        android:textSize="@dimen/dp_14" />
+
+    <TextView
+        android:id="@+id/tv_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp_40"
+        android:text="趋势"
+        android:textColor="#99A7B3"
+        android:textSize="@dimen/dp_14" />
+
+    <TextView
+        android:id="@+id/tv_exchange_dz"
+        android:layout_width="@dimen/dp_84"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/dp_24"
+        android:background="@drawable/shape_blue_bg_post_stroke"
+        android:gravity="center"
+        android:paddingBottom="@dimen/dp_6"
+        android:paddingTop="@dimen/dp_6"
+        android:text="电子券兑换"
+        android:textColor="@color/tpc_money_sel"
+        android:textSize="@dimen/dp_14" />
+
+
+    <TextView
+        android:id="@+id/tv_exchange_money"
+        android:layout_width="@dimen/dp_84"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/tv_exchange_dz"
+        android:layout_marginTop="@dimen/dp_12"
+        android:background="@drawable/shape_orange_bg_post_stroke"
+        android:gravity="center"
+        android:paddingBottom="@dimen/dp_6"
+        android:paddingTop="@dimen/dp_6"
+        android:text="现金兑换"
+        android:textColor="@color/text_total_money"
+        android:textSize="@dimen/dp_14" />
+
+</RelativeLayout>

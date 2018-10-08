@@ -71,6 +71,15 @@
         android:visibility="gone" />
 
     <ImageView
+        android:id="@+id/iv_search"
+        android:layout_width="@dimen/dp_56"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:padding="@dimen/dp_12"
+        android:src="@mipmap/icon_fy_search"
+        android:visibility="gone" />
+
+    <ImageView
         android:id="@+id/iv_code"
         android:layout_width="@dimen/dp_48"
         android:layout_height="match_parent"

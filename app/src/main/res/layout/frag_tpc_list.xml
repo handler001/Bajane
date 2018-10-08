@@ -280,7 +280,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/dp_10"
-                    android:text="行情"
+                    android:text="市场"
                     android:textColor="@color/text_black_3"
                     app:layout_textSizePercent="12%w" />
 
@@ -312,7 +312,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/dp_10"
-                    android:text="数字资产"
+                    android:text="我的资产"
                     android:textColor="@color/text_black_3"
                     app:layout_textSizePercent="12%w" />
 
